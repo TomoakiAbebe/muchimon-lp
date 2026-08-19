@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ムチモンのキャラクターについて | ムチモン</title>
+    <meta name="description" content="ムチモンは、町外れの研究所で生まれたAI搭載コミュニケーションロボット。コーヒー事件から始まった、少しポンコツで好奇心いっぱいの物語を紹介します。" />
+    <link rel="preload" as="image" href="../assets/history/muchimon_birth_15_01.png" />
+    <style>
+      :root {
+        --bg: #fbf7ee;
+        --ink: #17211d;
+        --muted: #64726c;
+        --line: #e3d9c9;
+        --blue: #1788d4;
+        --red: #e7473f;
+        --green: #06c755;
+        --green-dark: #05a847;
+        --yellow: #ffd86b;
+        --brown: #875725;
+        --panel: rgba(255, 255, 255, .9);
+        --shadow: 0 18px 45px rgba(41, 31, 18, .10);
+        font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(23, 136, 212, .055) 1px, transparent 1px),
+          linear-gradient(rgba(231, 71, 63, .045) 1px, transparent 1px),
+          linear-gradient(180deg, #fffaf0 0%, var(--bg) 45%, #f4fbff 100%);
+        background-size: 48px 48px, 48px 48px, auto;
+      }
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-bottom: 1px solid rgba(124, 103, 75, .18);
+        background: rgba(255, 252, 246, .9);
+        padding: 12px clamp(18px, 4vw, 56px);
+        backdrop-filter: blur(18px);
+      }
+      .logo img { width: clamp(138px, 15vw, 214px); }
+      .nav nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+      .nav a:not(.logo) {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: .88rem;
+        font-weight: 900;
+        padding: 8px 13px;
+        white-space: nowrap;
+      }
+      .nav-cta { background: var(--green); color: #fff !important; box-shadow: 0 10px 22px rgba(6, 199, 85, .24); }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(420px, .92fr) minmax(360px, .8fr);
+        gap: clamp(30px, 5vw, 72px);
+        align-items: center;
+        min-height: calc(100vh - 66px);
+        padding: clamp(44px, 6vw, 86px) clamp(18px, 4vw, 56px) 64px;
+      }
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        min-height: 31px;
+        margin: 0 0 18px;
+        border: 1px solid rgba(23, 136, 212, .24);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .82);
+        color: #126fab;
+        font-size: .78rem;
+        font-weight: 950;
+        line-height: 1.25;
+        padding: 6px 12px;
+      }
+      h1, h2, h3 {
+        margin: 0;
+        color: var(--ink);
+        font-weight: 950;
+        letter-spacing: 0;
+        line-break: strict;
+        text-wrap: pretty;
+      }
+      h1 { max-width: 780px; font-size: clamp(2.55rem, 4.7vw, 5rem); line-height: 1.08; }
+      .lead {
+        max-width: 720px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.35vw, 1.18rem);
+        font-weight: 800;
+        line-height: 1.82;
+        text-wrap: pretty;
+      }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .primary, .secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        border: 2px solid var(--green);
+        border-radius: 10px;
+        font-weight: 950;
+        line-height: 1.4;
+        padding: 12px 20px;
+        text-align: center;
+      }
+      .primary { background: linear-gradient(180deg, #19d767 0%, var(--green) 100%); color: #fff; box-shadow: 0 16px 30px rgba(6, 199, 85, .28); }
+      .secondary { background: rgba(255, 255, 255, .9); color: var(--green-dark); }
+
+      .hero-art {
+        position: relative;
+        border: 12px solid var(--brown);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .hero-art img { width: 100%; height: 100%; object-fit: cover; }
+      .hero-note {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        border: 1px solid rgba(255, 255, 255, .72);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, .92);
+        padding: 16px;
+        box-shadow: 0 18px 36px rgba(22, 31, 35, .16);
+      }
+      .hero-note strong { display: block; color: var(--blue); }
+      .hero-note span { display: block; margin-top: 6px; font-weight: 900; line-height: 1.55; }
+
+      .section { padding: clamp(58px, 7vw, 96px) clamp(18px, 4vw, 56px); }
+      .section-inner { max-width: 1160px; margin: 0 auto; }
+      .section h2 { max-width: 1080px; font-size: clamp(1.9rem, 3.15vw, 3.35rem); line-height: 1.16; }
+      .section p { color: var(--muted); line-height: 1.82; text-wrap: pretty; }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 30px;
+      }
+      .fact {
+        border: 1px solid rgba(124, 103, 75, .16);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: 24px;
+        box-shadow: 0 12px 34px rgba(54, 43, 26, .07);
+      }
+      .fact span { color: var(--red); font-weight: 950; }
+      .fact h3 { margin: 10px 0; font-size: 1.16rem; line-height: 1.42; }
+      .fact p { margin: 0; }
+
+      .story { background: linear-gradient(180deg, #fffdf8 0%, #fff8ed 100%); border-block: 1px solid var(--line); }
+      .timeline {
+        display: grid;
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .episode {
+        display: grid;
+        grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+        gap: 24px;
+        align-items: center;
+        border: 1px solid rgba(124, 103, 75, .16);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, .9);
+        padding: 18px;
+        box-shadow: 0 12px 34px rgba(54, 43, 26, .07);
+      }
+      .episode img { border: 8px solid var(--brown); border-radius: 12px; background: #fff; }
+      .episode small {
+        display: inline-flex;
+        margin-bottom: 10px;
+        color: var(--blue);
+        font-weight: 950;
+      }
+      .episode h3 { font-size: clamp(1.28rem, 2.2vw, 2rem); line-height: 1.28; }
+      .episode p { margin: 14px 0 0; }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .profile-card {
+        border: 1px solid rgba(124, 103, 75, .16);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, .92);
+        padding: 24px;
+        box-shadow: 0 12px 34px rgba(54, 43, 26, .07);
+      }
+      .profile-card h3 { margin-bottom: 10px; font-size: 1.12rem; }
+      .profile-card p { margin: 0; }
+
+      .gallery { background: #fffdf8; }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 12px;
+        margin-top: 30px;
+      }
+      .gallery-grid img {
+        border: 6px solid var(--brown);
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 10px 26px rgba(54, 43, 26, .08);
+      }
+
+      .cta {
+        display: grid;
+        grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
+        gap: 28px;
+        align-items: center;
+        background: linear-gradient(135deg, var(--green-dark) 0%, #15883d 100%);
+        color: #fff;
+      }
+      .cta h2, .cta p { color: #fff; }
+      .cta img { max-height: 190px; object-fit: contain; filter: drop-shadow(0 18px 14px rgba(16, 79, 36, .24)); }
+
+      .site-footer { background: #17211d; color: #fff; padding: 40px clamp(18px, 4vw, 56px) 24px; }
+      .footer-main { display: grid; grid-template-columns: minmax(160px, 220px) minmax(0, 620px); gap: 22px; align-items: center; max-width: 1120px; margin: 0 auto; }
+      .footer-logo img { width: clamp(150px, 16vw, 220px); }
+      .footer-main p { margin: 0; color: rgba(255, 255, 255, .76); font-weight: 800; line-height: 1.75; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 10px 18px; max-width: 1120px; margin: 28px auto 0; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .14); }
+      .footer-links a { color: #fff; font-weight: 900; line-height: 1.3; white-space: nowrap; }
+      .footer-bottom { display: flex; flex-wrap: wrap; gap: 8px 18px; max-width: 1120px; margin: 24px auto 0; color: rgba(255, 255, 255, .58); font-size: .84rem; font-weight: 800; line-height: 1.5; }
+
+      @media (max-width: 920px) {
+        .hero, .intro-grid, .episode, .profile-grid, .cta, .footer-main { grid-template-columns: 1fr; }
+        .hero { min-height: auto; }
+        .hero-art { max-width: 620px; margin: 0 auto; }
+      }
+
+      @media (max-width: 640px) {
+        .nav { align-items: flex-start; flex-direction: column; padding: 10px 16px; }
+        .logo img { width: 136px; }
+        .nav nav { justify-content: flex-start; gap: 6px; }
+        .nav a:not(.logo) { min-height: 36px; font-size: .82rem; padding: 7px 10px; }
+        .hero { padding: 34px 18px 42px; }
+        h1 { font-size: clamp(2.15rem, 10vw, 3rem); line-height: 1.14; }
+        .lead { margin-top: 18px; font-size: 1rem; line-height: 1.78; }
+        .actions { margin-top: 22px; }
+        .primary, .secondary { width: 100%; }
+        .hero-art { border-width: 8px; }
+        .hero-note { position: static; border-radius: 0; box-shadow: none; }
+        .section { padding: 44px 18px; }
+        .section h2 { font-size: clamp(1.75rem, 7.2vw, 2.35rem); line-height: 1.22; }
+        .episode, .fact, .profile-card { padding: 18px; }
+        .episode img, .gallery-grid img { border-width: 5px; }
+        .gallery-grid { grid-template-columns: 1fr 1fr; }
+        .cta img { max-height: 180px; }
+        .site-footer { padding: 34px 18px 22px; }
+        .footer-bottom span { white-space: normal; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="logo" href="../"><img src="../assets/muchimon-logo.png" alt="ムチモン" /></a>
+      <nav>
+        <a href="../">LPへ戻る</a>
+        <a href="#story">ものがたり</a>
+        <a href="#profile">プロフィール</a>
+        <a class="nav-cta" href="https://lin.ee/755YFJo" target="_blank" rel="noopener" data-track="line-register">LINE友だち追加</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="kicker">Muchimon Character Story</p>
+          <h1>ムチモンは、知識を教えてもらうほど成長するポンコツAIロボット。</h1>
+          <p class="lead">町外れの古びた研究所で生まれたムチモン。博士の夢は「世界一の学習AI」をのせた最強の学習パートナーロボを作ることでした。でも、完成祝いの一杯のコーヒーが、すべてを少しだけおかしな方向へ変えてしまいます。</p>
+          <div class="actions">
+            <a class="primary" href="#story">誕生ストーリーを読む</a>
+            <a class="secondary" href="../">LPへ戻る</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="../assets/history/muchimon_birth_15_01.png" alt="町外れの古びた研究所で、博士がロボットを作り始める様子" />
+          <div class="hero-note"><strong>物語のはじまり</strong><span>自称・天才発明家の博士と、まだ名前のないロボット。</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="kicker">Who is Muchimon?</p>
+          <h2>勉強の知識は空っぽ。でも、人間のことを知りたくてたまらない。</h2>
+          <p>ムチモンは、AI搭載コミュニケーションロボットです。博士が教科書通りの難しいデータを一気に送ると、頭が熱くなって処理落ちしてしまいます。けれど、ユーザーが自分の言葉でかみ砕いて説明すると、ムチモンの目はキラキラ輝きます。</p>
+          <div class="intro-grid">
+            <article class="fact"><span>01</span><h3>世界一の学習AIになるはずだった</h3><p>博士は世界中の知識を網羅したロボットを夢見ていました。ムチモンはその大きな夢から生まれた存在です。</p></article>
+            <article class="fact"><span>02</span><h3>コーヒー事件でポンコツに</h3><p>完成祝いのコーヒーが頭にこぼれ、回路がショート。簡単な知識を少しずつしか受け取れない体質になりました。</p></article>
+            <article class="fact"><span>03</span><h3>漫画やゲームにはなぜか詳しい</h3><p>一年間、博士のラボにある漫画やゲームを勝手に見続けた結果、小学生が好きな話題にはやたらと興味津々です。</p></article>
+            <article class="fact"><span>04</span><h3>初めて話が通じる友達を探している</h3><p>ムチモンにとって、ユーザーは初めての理解者。勉強だけでなく、好きなものや考え方も知りたがります。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story" id="story">
+        <div class="section-inner">
+          <p class="kicker">Birth Story</p>
+          <h2>一杯のコーヒーから、おかしな学習生活が始まりました。</h2>
+          <div class="timeline">
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_02.png" alt="博士が世界一の学習AIをロボットにのせようとしている様子" />
+              <div><small>Episode 1</small><h3>博士の大きな夢</h3><p>近未来、町外れの少し古びた研究所。自称・天才発明家の博士は、世界中の知識を持つ「最強の学習パートナーロボ」を作ろうとしていました。</p></div>
+            </article>
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_04.png" alt="博士の手が滑ってコーヒーがロボットにこぼれる様子" />
+              <div><small>Episode 2</small><h3>完成祝いのコーヒーがバシャリ</h3><p>一年前、ロボットはついに完成。博士がコーヒーで祝杯をあげたその瞬間、手が滑って熱々のコーヒーが頭にバシャリ。回路はショートし、データ通信路はベタベタになってしまいました。</p></div>
+            </article>
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_06.png" alt="難しい学習データでムチモンが処理落ちする様子" />
+              <div><small>Episode 3</small><h3>難しい知識でオーバーヒート</h3><p>博士が高度な学習データを一気に送ると、ムチモンはプシューっと知恵熱でダウン。簡単な知識を、少しずつ、やさしい言葉でしか受け取れなくなりました。</p></div>
+            </article>
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_08.png" alt="ムチモンが漫画とゲームを発見して喜ぶ様子" />
+              <div><small>Episode 4</small><h3>空白の一年間で生まれた個性</h3><p>博士が研究に没頭するあいだ、ムチモンはラボの隅で漫画やゲームを見続けました。勉強の知識は空っぽなのに、楽しいセリフや遊びの話題にはどんどん詳しくなっていきます。</p></div>
+            </article>
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_10.png" alt="研究室の奥でユーザーがムチモンと出会う様子" />
+              <div><small>Episode 5</small><h3>ラボの奥で出会った初めての友達</h3><p>散らかった研究室の奥で、ムチモンはあなたに声をかけます。「ねえねえ、君は何が好き？」ムチモンは、人間のことをもっと知りたくてたまらないのです。</p></div>
+            </article>
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_13.png" alt="ユーザーのかみ砕いた説明でムチモンの目が輝く様子" />
+              <div><small>Episode 6</small><h3>かみ砕いた説明なら、ちゃんと届く</h3><p>あなたが算数を自分の言葉で教えると、ムチモンの目がキラキラ輝きました。博士の最新理論よりも、ユーザーのやさしい説明の方がムチモンには合っていたのです。</p></div>
+            </article>
+            <article class="episode">
+              <img src="../assets/history/muchimon_birth_15_15.png" alt="博士とムチモンとユーザーの奇妙な学習生活が始まる様子" />
+              <div><small>Episode 7</small><h3>奇妙な協力関係のスタート</h3><p>博士は少し悔しそうに、あなたをムチモンの専属の先生に任命します。こうして、嫉妬しながらもヒントをくれる博士、ポンコツだけど素直なムチモン、そして唯一の理解者であるあなたの学習生活が始まります。</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="profile">
+        <div class="section-inner">
+          <p class="kicker">Profile</p>
+          <h2>ムチモンの基本プロフィール</h2>
+          <div class="profile-grid">
+            <article class="profile-card"><h3>属性</h3><p>AI搭載コミュニケーションロボット。ただし、まだまだポンコツ。難しい話はすぐにオーバーヒートします。</p></article>
+            <article class="profile-card"><h3>年齢</h3><p>生まれてから一年。研究所で過ごした時間を通じて、好奇心いっぱいの性格になりました。</p></article>
+            <article class="profile-card"><h3>身長と体重</h3><p>身長は約35cm。体重は荷物の詰まったランドセルくらいです。</p></article>
+            <article class="profile-card"><h3>好きなこと</h3><p>新しい知識、ユーザーの説明、ラムネ、ひらめきの瞬間、冷たいもの、漫画やゲームの話題。</p></article>
+            <article class="profile-card"><h3>苦手なこと</h3><p>博士の長い説明、苦いもの、湿気、コーヒー。水まわりもロボットなので少し苦手です。</p></article>
+            <article class="profile-card"><h3>行動原理</h3><p>もっと知りたい、もっと仲良くなりたい。ユーザーと一緒に学びながら成長することが、ムチモンの原動力です。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery">
+        <div class="section-inner">
+          <p class="kicker">Story Gallery</p>
+          <h2>ムチモン誕生ものがたり</h2>
+          <div class="gallery-grid">
+            <img src="../assets/history/muchimon_birth_15_01.png" alt="町外れの古びた研究所" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_03.png" alt="ロボットがついに完成" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_05.png" alt="コーヒーで回路がベタベタに" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_07.png" alt="ひとりぼっちの一年間" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_09.png" alt="一歳なのに個性つよめ" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_11.png" alt="君のことを知りたい" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_12.png" alt="算数の本でオーバーヒート" loading="lazy" />
+            <img src="../assets/history/muchimon_birth_15_14.png" alt="天才博士、まさかの敗北" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta">
+        <img src="../assets/muchimon-character.png" alt="ムチモン" />
+        <div>
+          <p class="kicker">Start with LINE</p>
+          <h2>ムチモンのリリース通知を、公式LINEで受け取りませんか。</h2>
+          <p>正式リリースのお知らせや使い方を公式LINEでお届けします。</p>
+          <div class="actions"><a class="primary" href="https://lin.ee/755YFJo" target="_blank" rel="noopener" data-track="line-register">LINEで友だち追加</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <a class="footer-logo" href="../"><img src="../assets/muchimon-logo.png" alt="ムチモン" /></a>
+        <p>ムチモンは、小学生の算数で手が止まった瞬間をキャラクターが支える学習伴走アプリです。</p>
+      </div>
+      <div class="footer-links" aria-label="フッターナビゲーション">
+        <a href="../">LPへ戻る</a>
+        <a href="#story">ものがたり</a>
+        <a href="#profile">プロフィール</a>
+        <a href="https://lin.ee/755YFJo" target="_blank" rel="noopener" data-track="line-register">LINE友だち追加</a>
+        <a href="https://minakano.co.jp/" target="_blank" rel="noopener">運営会社</a>
+      </div>
+      <div class="footer-bottom">
+        <span>運営会社：株式会社ミナカノ</span>
+        <span>&copy; 2026 Minakano Inc.</span>
+      </div>
+    </footer>
+  </body>
+</html>
