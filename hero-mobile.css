@@ -1,0 +1,38 @@
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 28px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: 2.05rem;
+    line-height: 1.22;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    text-wrap: balance;
+  }
+
+  .title-line {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .title-line:nth-child(2)::after,
+  .title-line:nth-child(3)::after {
+    content: "";
+    display: block;
+  }
+
+  .lead {
+    font-size: .98rem;
+    line-height: 1.72;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 374px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
