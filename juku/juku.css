@@ -437,11 +437,59 @@
 }
 
 .optional-fields summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   cursor: pointer;
   color: var(--blue);
   font-weight: 950;
   line-height: 1.35;
-  list-style-position: inside;
+  list-style: none;
+}
+
+.optional-fields summary::-webkit-details-marker {
+  display: none;
+}
+
+.optional-summary-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optional-summary-text:before {
+  content: "+";
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.optional-fields[open] .optional-summary-text {
+  font-size: 0;
+}
+
+.optional-fields[open] .optional-summary-text:after {
+  content: "任意項目を閉じる";
+  font-size: .94rem;
+}
+
+.optional-fields[open] .optional-summary-text:before {
+  content: "-";
+}
+
+.optional-fields summary small {
+  color: #52625c;
+  font-size: .78rem;
+  font-weight: 850;
+  line-height: 1.35;
+  text-align: right;
 }
 
 .optional-fields[open] summary {
@@ -697,6 +745,15 @@
 
   .form-section {
     padding: 16px;
+  }
+
+  .optional-fields summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .optional-fields summary small {
+    text-align: left;
   }
 
   .contact-toggle summary {
