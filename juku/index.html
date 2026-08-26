@@ -181,13 +181,22 @@
 
               <div class="form-head">
                 <p class="form-eyebrow">Contact Form</p>
-                <h3>メールアドレスだけで資料請求できます。</h3>
+                <h3>必要事項を入力して資料請求できます。</h3>
                 <p>ムチモン for 塾の資料や先行案内を、メールでお送りします。</p>
               </div>
 
               <fieldset class="form-section">
-                <legend>メールアドレス</legend>
+                <legend>基本情報</legend>
                 <div class="form-grid">
+                  <label><span class="label-row">塾名・教室名 <span class="required-badge">必須</span></span>
+                    <input name="塾名・教室名" type="text" autocomplete="organization" placeholder="例：ムチモン学習塾 吉祥寺校" required maxlength="200" />
+                  </label>
+                  <label><span class="label-row">ご担当者名 <span class="required-badge">必須</span></span>
+                    <input name="ご担当者名" type="text" autocomplete="name" placeholder="例：山田 太郎" required maxlength="100" />
+                  </label>
+                  <label><span class="label-row">役職 <span class="required-badge">必須</span></span>
+                    <input name="役職" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" required maxlength="100" />
+                  </label>
                   <label><span class="label-row">メールアドレス <span class="required-badge">必須</span></span>
                     <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" required maxlength="200" />
                   </label>
@@ -195,22 +204,7 @@
               </fieldset>
 
               <details class="optional-fields">
-                <summary>任意で塾名や詳しい状況を入力する</summary>
-                <fieldset class="form-section">
-                  <legend>基本情報</legend>
-                  <div class="form-grid">
-                    <label>塾名・教室名
-                      <input name="塾名・教室名" type="text" autocomplete="organization" placeholder="例：ムチモン学習塾 吉祥寺校" maxlength="200" />
-                    </label>
-                    <label>ご担当者名
-                      <input name="ご担当者名" type="text" autocomplete="name" placeholder="例：山田 太郎" maxlength="100" />
-                    </label>
-                    <label>役職
-                      <input name="役職" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" maxlength="100" />
-                    </label>
-                  </div>
-                </fieldset>
-
+                <summary>任意で詳しい状況を入力する</summary>
                 <fieldset class="form-section">
                   <legend>導入イメージ</legend>
                   <div class="form-grid">
