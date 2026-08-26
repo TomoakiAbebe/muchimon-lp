@@ -299,6 +299,84 @@
   color: var(--blue);
 }
 
+.juku-contact-form {
+  display: grid;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, .58);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .96);
+  color: var(--ink);
+  padding: clamp(18px, 4vw, 28px);
+  box-shadow: 0 18px 42px rgba(26, 36, 41, .16);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.juku-contact-form label {
+  display: grid;
+  gap: 7px;
+  color: #31413b;
+  font-size: .94rem;
+  font-weight: 950;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.juku-contact-form input,
+.juku-contact-form select,
+.juku-contact-form textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(124, 103, 75, .22);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+  line-height: 1.45;
+  padding: 10px 12px;
+}
+
+.juku-contact-form input:focus,
+.juku-contact-form select:focus,
+.juku-contact-form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(23, 136, 212, .14);
+  outline: none;
+}
+
+.juku-contact-form textarea {
+  min-height: 118px;
+  resize: vertical;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.form-actions .business-cta {
+  cursor: pointer;
+  font: inherit;
+}
+
+.form-actions small {
+  flex: 1 1 260px;
+  color: #52625c;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
 @media (max-width: 1100px) {
   .scenario-grid,
   .fit-list {
@@ -353,7 +431,8 @@
   }
 
   .scenario-grid,
-  .fit-list {
+  .fit-list,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 

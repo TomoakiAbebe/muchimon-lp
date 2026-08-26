@@ -9,7 +9,7 @@
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="../styles.css?v=20260819-history1" />
-    <link rel="stylesheet" href="./juku.css?v=20260826-juku1" />
+    <link rel="stylesheet" href="./juku.css?v=20260826-juku2" />
   </head>
   <body>
     <header class="nav">
@@ -19,7 +19,7 @@
         <a href="#scene">導入シーン</a>
         <a href="#flow">使い方</a>
         <a href="#pilot">無料テスト導入</a>
-        <a class="nav-cta" href="mailto:sales@muchimon.com?subject=%E3%83%A0%E3%83%81%E3%83%A2%E3%83%B3%20for%20%E5%A1%BE%E3%81%AE%E8%B3%87%E6%96%99%E8%AB%8B%E6%B1%82">資料請求</a>
+        <a class="nav-cta" href="#juku-contact">資料請求</a>
       </nav>
     </header>
 
@@ -30,8 +30,8 @@
           <h1>家庭学習が続かない生徒に、塾の外でも伴走できる仕組みを。</h1>
           <p class="lead">ムチモンは、宿題を撮影するだけでキャラクターが声をかけ、解説、類題、学習ログまでつなげる学習伴走AIです。塾での指導と家庭学習のあいだを埋め、生徒が一人でも取り組みやすい環境をつくります。</p>
           <div class="actions">
-            <a class="primary business-cta" href="mailto:sales@muchimon.com?subject=%E3%83%A0%E3%83%81%E3%83%A2%E3%83%B3%20for%20%E5%A1%BE%E3%81%AE%E7%84%A1%E6%96%99%E3%83%86%E3%82%B9%E3%83%88%E5%B0%8E%E5%85%A5%E7%9B%B8%E8%AB%87">無料テスト導入はこちら</a>
-            <a class="secondary juku-link" href="mailto:sales@muchimon.com?subject=%E3%83%A0%E3%83%81%E3%83%A2%E3%83%B3%20for%20%E5%A1%BE%E3%81%AE%E8%B3%87%E6%96%99%E8%AB%8B%E6%B1%82">資料ダウンロード</a>
+            <a class="primary business-cta" href="#juku-contact">無料テスト導入はこちら</a>
+            <a class="secondary juku-link" href="#juku-contact">資料請求</a>
           </div>
           <div class="juku-proof">
             <div><strong>家庭学習</strong><span>宿題の定着を支援</span></div>
@@ -50,7 +50,7 @@
 
       <section class="juku-strip">
         <p>授業時間だけでは届きにくい「家でやる」を、キャラクターとの対話と学習ログで支えます。</p>
-        <a href="mailto:sales@muchimon.com?subject=%E3%83%A0%E3%83%81%E3%83%A2%E3%83%B3%20for%20%E5%A1%BE%E3%81%AE%E5%B0%8E%E5%85%A5%E7%9B%B8%E8%AB%87">導入相談をする</a>
+        <a href="#juku-contact">導入相談をする</a>
       </section>
 
       <section class="section juku-section" id="scene">
@@ -161,11 +161,53 @@
             <div><span>2</span>導入条件の確認</div>
             <div><span>3</span>無料テスト開始</div>
           </div>
-          <div class="actions">
-            <a class="primary business-cta" href="mailto:sales@muchimon.com?subject=%E3%83%A0%E3%83%81%E3%83%A2%E3%83%B3%20for%20%E5%A1%BE%E3%81%AE%E7%84%A1%E6%96%99%E3%83%86%E3%82%B9%E3%83%88%E5%B0%8E%E5%85%A5%E7%9B%B8%E8%AB%87">無料テスト導入はこちら</a>
-            <a class="secondary juku-download" href="mailto:sales@muchimon.com?subject=%E3%83%A0%E3%83%81%E3%83%A2%E3%83%B3%20for%20%E5%A1%BE%E3%81%AE%E8%B3%87%E6%96%99%E8%AB%8B%E6%B1%82">資料ダウンロード</a>
-          </div>
-          <small>法人利用のお問い合わせ：sales@muchimon.com</small>
+          <form class="juku-contact-form" id="juku-contact">
+            <div class="form-grid">
+              <label>お問い合わせ目的
+                <select name="purpose" required>
+                  <option value="無料テスト導入相談">無料テスト導入相談</option>
+                  <option value="資料請求">資料請求</option>
+                  <option value="導入時期・条件の相談">導入時期・条件の相談</option>
+                  <option value="その他">その他</option>
+                </select>
+              </label>
+              <label>塾名・教室名
+                <input name="school" type="text" autocomplete="organization" required />
+              </label>
+              <label>ご担当者名
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>役職
+                <input name="role" type="text" autocomplete="organization-title" />
+              </label>
+              <label>メールアドレス
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>電話番号
+                <input name="tel" type="tel" autocomplete="tel" />
+              </label>
+              <label>対象学年・人数
+                <input name="students" type="text" placeholder="例：小4〜中2、30名ほど" />
+              </label>
+              <label>希望時期
+                <select name="timing">
+                  <option value="未定">未定</option>
+                  <option value="できるだけ早く">できるだけ早く</option>
+                  <option value="1か月以内">1か月以内</option>
+                  <option value="3か月以内">3か月以内</option>
+                  <option value="次学期・次年度から">次学期・次年度から</option>
+                </select>
+              </label>
+            </div>
+            <label class="form-full">現在困っていること・相談内容
+              <textarea name="message" placeholder="例：家庭学習が続かない生徒へのテスト導入を相談したい"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="primary business-cta" type="submit">入力内容をメールで送信</button>
+              <small>送信ボタンを押すと、入力内容を整理したメール作成画面が開きます。送信前に内容を確認できます。</small>
+            </div>
+          </form>
+          <small>法人利用のお問い合わせ：muchimon_sales@minakano.co.jp</small>
         </div>
       </section>
     </main>
@@ -180,7 +222,7 @@
         <a href="#scene">導入シーン</a>
         <a href="#flow">使い方</a>
         <a href="#pilot">無料テスト導入</a>
-        <a href="mailto:sales@muchimon.com">法人利用のお問い合わせ</a>
+        <a href="#juku-contact">法人利用のお問い合わせ</a>
         <a href="https://minakano.co.jp/" target="_blank" rel="noopener">運営会社</a>
       </div>
       <div class="footer-bottom">
@@ -188,5 +230,38 @@
         <span>&copy; 2026 Minakano Inc.</span>
       </div>
     </footer>
+    <script>
+      (() => {
+        const form = document.querySelector("#juku-contact");
+        if (!form) return;
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const data = new FormData(form);
+          const value = (key) => String(data.get(key) || "").trim();
+          const purpose = value("purpose") || "塾向けお問い合わせ";
+          const school = value("school") || "未入力";
+          const subject = `【ムチモン塾向け】${purpose} / ${school}`;
+          const body = [
+            "ムチモン for 塾のお問い合わせです。",
+            "",
+            `お問い合わせ目的：${purpose}`,
+            `塾名・教室名：${value("school")}`,
+            `ご担当者名：${value("name")}`,
+            `役職：${value("role")}`,
+            `メールアドレス：${value("email")}`,
+            `電話番号：${value("tel")}`,
+            `対象学年・人数：${value("students")}`,
+            `希望時期：${value("timing")}`,
+            "",
+            "現在困っていること・相談内容：",
+            value("message"),
+            "",
+            "送信元ページ：muchimon.jp/juku"
+          ].join("\n");
+          window.location.href = `mailto:muchimon_sales@minakano.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+      })();
+    </script>
   </body>
 </html>
