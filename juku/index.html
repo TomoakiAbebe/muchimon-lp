@@ -9,7 +9,7 @@
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="../styles.css?v=20260819-history1" />
-    <link rel="stylesheet" href="./juku.css?v=20260826-juku3" />
+    <link rel="stylesheet" href="./juku.css?v=20260826-juku4" />
   </head>
   <body>
     <header class="nav">
@@ -161,105 +161,122 @@
             <div><span>2</span>導入条件の確認</div>
             <div><span>3</span>無料テスト開始</div>
           </div>
-          <form class="juku-contact-form" id="juku-contact">
-            <div class="form-head">
-              <p class="form-eyebrow">Contact Form</p>
-              <h3>お問い合わせ内容を教えてください</h3>
-              <p>目的を選ぶだけで、運営側が確認しやすい件名と本文に整理されます。</p>
-            </div>
+          <details class="contact-toggle" id="juku-contact">
+            <summary>
+              <span>
+                <small>Contact Form</small>
+                <strong>問い合わせフォームを開く</strong>
+              </span>
+              <span class="toggle-icon" aria-hidden="true"></span>
+            </summary>
 
-            <fieldset class="form-section purpose-section">
-              <legend>お問い合わせ目的 <span class="required-badge">必須</span></legend>
-              <div class="purpose-cards">
-                <label>
-                  <input name="purpose" type="radio" value="無料テスト導入相談" checked required />
-                  <span><strong>無料テスト導入相談</strong><small>まずは試したい塾様向け</small></span>
-                </label>
-                <label>
-                  <input name="purpose" type="radio" value="資料請求" required />
-                  <span><strong>資料請求</strong><small>検討資料を受け取りたい</small></span>
-                </label>
-                <label>
-                  <input name="purpose" type="radio" value="導入時期・条件の相談" required />
-                  <span><strong>導入時期・条件の相談</strong><small>人数や運用方法を相談したい</small></span>
-                </label>
-                <label>
-                  <input name="purpose" type="radio" value="その他" required />
-                  <span><strong>その他</strong><small>上記以外のご相談</small></span>
-                </label>
-              </div>
-            </fieldset>
+            <form class="juku-contact-form" id="juku-contact-form" action="https://formsubmit.co/ajax/muchimon_sales@minakano.co.jp" method="POST">
+              <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="【ムチモン塾向け】お問い合わせ" />
+              <input type="hidden" name="送信元ページ" value="muchimon.jp/juku" />
 
-            <fieldset class="form-section">
-              <legend>基本情報</legend>
-              <div class="form-grid">
-                <label><span class="label-row">塾名・教室名 <span class="required-badge">必須</span></span>
-                  <input name="school" type="text" autocomplete="organization" placeholder="例：ムチモン学習塾 吉祥寺校" required />
-                </label>
-                <label><span class="label-row">ご担当者名 <span class="required-badge">必須</span></span>
-                  <input name="name" type="text" autocomplete="name" placeholder="例：山田 太郎" required />
-                </label>
-                <label>役職
-                  <input name="role" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" />
-                </label>
-                <label><span class="label-row">メールアドレス <span class="required-badge">必須</span></span>
-                  <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" required />
-                </label>
-                <label>電話番号
-                  <input name="tel" type="tel" autocomplete="tel" placeholder="例：03-0000-0000" />
-                </label>
-                <label>希望する連絡方法
-                  <select name="contact_method">
-                    <option value="メール">メール</option>
-                    <option value="電話">電話</option>
-                    <option value="どちらでも可">どちらでも可</option>
-                  </select>
-                </label>
+              <div class="form-head">
+                <p class="form-eyebrow">Contact Form</p>
+                <h3>お問い合わせ内容を教えてください</h3>
+                <p>目的や導入イメージを選ぶだけで、運営側が確認しやすい内容に整理されます。</p>
               </div>
-            </fieldset>
 
-            <fieldset class="form-section">
-              <legend>導入イメージ</legend>
-              <div class="form-grid">
-                <label>対象学年・人数
-                  <input name="students" type="text" placeholder="例：小4〜中2、30名ほど" />
-                </label>
-                <label>希望時期
-                  <select name="timing">
-                    <option value="未定">未定</option>
-                    <option value="できるだけ早く">できるだけ早く</option>
-                    <option value="1か月以内">1か月以内</option>
-                    <option value="3か月以内">3か月以内</option>
-                    <option value="次学期・次年度から">次学期・次年度から</option>
-                  </select>
-                </label>
-              </div>
-              <div class="checkbox-group">
-                <p>気になっている課題</p>
-                <label><input name="challenges" type="checkbox" value="家庭学習が続かない" />家庭学習が続かない</label>
-                <label><input name="challenges" type="checkbox" value="保護者対応の負担が大きい" />保護者対応の負担が大きい</label>
-                <label><input name="challenges" type="checkbox" value="講師ごとの指導差を補いたい" />講師ごとの指導差を補いたい</label>
-                <label><input name="challenges" type="checkbox" value="勉強が苦手な生徒を支援したい" />勉強が苦手な生徒を支援したい</label>
-              </div>
-            </fieldset>
+              <fieldset class="form-section purpose-section">
+                <legend>お問い合わせ目的 <span class="required-badge">必須</span></legend>
+                <div class="purpose-cards">
+                  <label>
+                    <input name="お問い合わせ目的" type="radio" value="無料テスト導入相談" checked required />
+                    <span><strong>無料テスト導入相談</strong><small>まずは試したい塾様向け</small></span>
+                  </label>
+                  <label>
+                    <input name="お問い合わせ目的" type="radio" value="資料請求" required />
+                    <span><strong>資料請求</strong><small>検討資料を受け取りたい</small></span>
+                  </label>
+                  <label>
+                    <input name="お問い合わせ目的" type="radio" value="導入時期・条件の相談" required />
+                    <span><strong>導入時期・条件の相談</strong><small>人数や運用方法を相談したい</small></span>
+                  </label>
+                  <label>
+                    <input name="お問い合わせ目的" type="radio" value="その他" required />
+                    <span><strong>その他</strong><small>上記以外のご相談</small></span>
+                  </label>
+                </div>
+              </fieldset>
 
-            <fieldset class="form-section">
-              <legend>相談内容</legend>
-              <label class="form-full">現在困っていること・相談内容
-                <textarea name="message" placeholder="例：家庭学習が続かない生徒への無料テスト導入を相談したい"></textarea>
+              <fieldset class="form-section">
+                <legend>基本情報</legend>
+                <div class="form-grid">
+                  <label><span class="label-row">塾名・教室名 <span class="required-badge">必須</span></span>
+                    <input name="塾名・教室名" type="text" autocomplete="organization" placeholder="例：ムチモン学習塾 吉祥寺校" required maxlength="200" />
+                  </label>
+                  <label><span class="label-row">ご担当者名 <span class="required-badge">必須</span></span>
+                    <input name="ご担当者名" type="text" autocomplete="name" placeholder="例：山田 太郎" required maxlength="100" />
+                  </label>
+                  <label>役職
+                    <input name="役職" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" maxlength="100" />
+                  </label>
+                  <label><span class="label-row">メールアドレス <span class="required-badge">必須</span></span>
+                    <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" required maxlength="200" />
+                  </label>
+                  <label>電話番号
+                    <input name="電話番号" type="tel" autocomplete="tel" placeholder="例：03-0000-0000" maxlength="50" />
+                  </label>
+                  <label>希望する連絡方法
+                    <select name="希望する連絡方法">
+                      <option value="メール">メール</option>
+                      <option value="電話">電話</option>
+                      <option value="どちらでも可">どちらでも可</option>
+                    </select>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-section">
+                <legend>導入イメージ</legend>
+                <div class="form-grid">
+                  <label>対象学年・人数
+                    <input name="対象学年・人数" type="text" placeholder="例：小4〜中2、30名ほど" maxlength="200" />
+                  </label>
+                  <label>希望時期
+                    <select name="希望時期">
+                      <option value="未定">未定</option>
+                      <option value="できるだけ早く">できるだけ早く</option>
+                      <option value="1か月以内">1か月以内</option>
+                      <option value="3か月以内">3か月以内</option>
+                      <option value="次学期・次年度から">次学期・次年度から</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="checkbox-group">
+                  <p>気になっている課題</p>
+                  <label><input name="気になっている課題" type="checkbox" value="家庭学習が続かない" />家庭学習が続かない</label>
+                  <label><input name="気になっている課題" type="checkbox" value="保護者対応の負担が大きい" />保護者対応の負担が大きい</label>
+                  <label><input name="気になっている課題" type="checkbox" value="講師ごとの指導差を補いたい" />講師ごとの指導差を補いたい</label>
+                  <label><input name="気になっている課題" type="checkbox" value="勉強が苦手な生徒を支援したい" />勉強が苦手な生徒を支援したい</label>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-section">
+                <legend>相談内容</legend>
+                <label class="form-full"><span class="label-row">現在困っていること・相談内容 <span class="required-badge">必須</span></span>
+                  <textarea name="message" placeholder="例：家庭学習が続かない生徒への無料テスト導入を相談したい" required maxlength="5000"></textarea>
+                </label>
+              </fieldset>
+
+              <label class="consent-check">
+                <input name="送信前確認" type="checkbox" value="確認済み" required />
+                <span>入力内容を確認し、送信することに同意します。</span>
               </label>
-            </fieldset>
 
-            <label class="consent-check">
-              <input name="confirm_mailer" type="checkbox" required />
-              <span>入力内容をメール作成画面で確認してから送信します。</span>
-            </label>
-
-            <div class="form-actions">
-              <button class="primary business-cta" type="submit">入力内容をメールで送信</button>
-              <small>送信ボタンを押すと、宛先 <strong>muchimon_sales@minakano.co.jp</strong> のメール作成画面が開きます。</small>
-            </div>
-          </form>
+              <div class="form-actions">
+                <button class="primary business-cta" type="submit">この内容で送信する</button>
+                <small>メール作成画面を開かず、このページ内でお問い合わせを送信できます。</small>
+              </div>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </details>
           <small>法人利用のお問い合わせ：muchimon_sales@minakano.co.jp</small>
         </div>
       </section>
@@ -285,37 +302,61 @@
     </footer>
     <script>
       (() => {
-        const form = document.querySelector("#juku-contact");
+        const contact = document.querySelector("#juku-contact");
+        const form = document.querySelector("#juku-contact-form");
         if (!form) return;
+        const status = form.querySelector(".form-status");
+        const submitButton = form.querySelector('button[type="submit"]');
+        const contactLinks = document.querySelectorAll('a[href="#juku-contact"]');
 
-        form.addEventListener("submit", (event) => {
+        const setStatus = (type, message) => {
+          if (!status) return;
+          status.className = `form-status ${type ? `is-${type}` : ""}`;
+          status.textContent = message;
+        };
+
+        const openContact = () => {
+          if (contact) contact.open = true;
+        };
+
+        if (location.hash === "#juku-contact") openContact();
+        contactLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            openContact();
+          });
+        });
+
+        form.addEventListener("submit", async (event) => {
           event.preventDefault();
           const data = new FormData(form);
           const value = (key) => String(data.get(key) || "").trim();
-          const values = (key) => data.getAll(key).map((item) => String(item).trim()).filter(Boolean).join("、");
-          const purpose = value("purpose") || "塾向けお問い合わせ";
-          const school = value("school") || "未入力";
-          const subject = `【ムチモン塾向け】${purpose} / ${school}`;
-          const body = [
-            "ムチモン for 塾のお問い合わせです。",
-            "",
-            `お問い合わせ目的：${purpose}`,
-            `塾名・教室名：${value("school")}`,
-            `ご担当者名：${value("name")}`,
-            `役職：${value("role")}`,
-            `メールアドレス：${value("email")}`,
-            `電話番号：${value("tel")}`,
-            `希望する連絡方法：${value("contact_method")}`,
-            `対象学年・人数：${value("students")}`,
-            `希望時期：${value("timing")}`,
-            `気になっている課題：${values("challenges") || "未選択"}`,
-            "",
-            "現在困っていること・相談内容：",
-            value("message"),
-            "",
-            "送信元ページ：muchimon.jp/juku"
-          ].join("\n");
-          window.location.href = `mailto:muchimon_sales@minakano.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          if (value("website")) return;
+
+          const purpose = value("お問い合わせ目的") || "塾向けお問い合わせ";
+          const school = value("塾名・教室名") || "未入力";
+          data.set("_subject", `【ムチモン塾向け】${purpose} / ${school}`);
+
+          setStatus("loading", "送信しています。少しだけお待ちください。");
+          submitButton.disabled = true;
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: data,
+              headers: { Accept: "application/json" }
+            });
+
+            if (!response.ok) throw new Error("submit failed");
+
+            form.reset();
+            const checkedPurpose = form.querySelector('input[name="お問い合わせ目的"][value="無料テスト導入相談"]');
+            if (checkedPurpose) checkedPurpose.checked = true;
+            setStatus("success", "お問い合わせを受け付けました。内容を確認のうえ、担当者よりご連絡します。");
+          } catch {
+            setStatus("error", "送信できませんでした。時間をおいて再度お試しください。");
+          } finally {
+            submitButton.disabled = false;
+          }
         });
       })();
     </script>

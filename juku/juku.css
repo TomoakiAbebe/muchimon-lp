@@ -299,15 +299,93 @@
   color: var(--blue);
 }
 
+.contact-toggle {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .58);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .96);
+  color: var(--ink);
+  box-shadow: 0 18px 42px rgba(26, 36, 41, .16);
+}
+
+.contact-toggle summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 86px;
+  cursor: pointer;
+  list-style: none;
+  padding: 20px clamp(18px, 4vw, 28px);
+}
+
+.contact-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.contact-toggle summary small {
+  display: block;
+  color: var(--blue);
+  font-size: .76rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.contact-toggle summary strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink);
+  font-size: clamp(1.14rem, 2vw, 1.55rem);
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.toggle-icon {
+  position: relative;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: var(--blue);
+  box-shadow: 0 12px 22px rgba(23, 136, 212, .24);
+}
+
+.toggle-icon:before,
+.toggle-icon:after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 16px;
+  height: 3px;
+  border-radius: 999px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  transition: transform .18s ease;
+}
+
+.toggle-icon:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.contact-toggle[open] .toggle-icon:after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
 .juku-contact-form {
   display: grid;
   gap: 18px;
-  border: 1px solid rgba(255, 255, 255, .58);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, .96);
+  border-top: 1px solid rgba(124, 103, 75, .12);
   color: var(--ink);
   padding: clamp(18px, 4vw, 28px);
-  box-shadow: 0 18px 42px rgba(26, 36, 41, .16);
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-head {
@@ -543,6 +621,12 @@
   font: inherit;
 }
 
+.form-actions .business-cta:disabled {
+  cursor: wait;
+  opacity: .68;
+  transform: none;
+}
+
 .form-actions small {
   flex: 1 1 260px;
   color: #52625c;
@@ -554,6 +638,36 @@
   color: var(--blue);
   font-weight: 950;
   overflow-wrap: anywhere;
+}
+
+.form-status {
+  min-height: 0;
+  margin: 0;
+  border-radius: 12px;
+  font-weight: 900;
+  line-height: 1.65;
+}
+
+.form-status:not(:empty) {
+  border: 1px solid rgba(124, 103, 75, .16);
+  padding: 14px 16px;
+}
+
+.form-status.is-loading {
+  background: rgba(244, 251, 255, .95);
+  color: var(--blue);
+}
+
+.form-status.is-success {
+  border-color: rgba(6, 199, 85, .22);
+  background: rgba(234, 247, 238, .95);
+  color: var(--green-dark);
+}
+
+.form-status.is-error {
+  border-color: rgba(231, 71, 63, .22);
+  background: rgba(255, 241, 239, .95);
+  color: var(--red);
 }
 
 @media (max-width: 1100px) {
@@ -627,6 +741,11 @@
 
   .purpose-cards label {
     min-height: auto;
+  }
+
+  .contact-toggle summary {
+    min-height: 76px;
+    padding: 18px;
   }
 
   .juku-mascot {
