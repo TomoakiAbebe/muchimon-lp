@@ -9,7 +9,7 @@
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="../styles.css?v=20260819-history1" />
-    <link rel="stylesheet" href="./juku.css?v=20260826-juku5" />
+    <link rel="stylesheet" href="./juku.css?v=20260826-juku6" />
   </head>
   <body>
     <header class="nav">
@@ -176,54 +176,18 @@
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="【ムチモン塾向け】資料請求" />
               <input type="hidden" name="送信元ページ" value="muchimon.jp/juku" />
-              <input type="hidden" name="連絡方針" value="資料請求のみの場合、しつこい営業電話は行いません。ご案内は原則メールでお送りします。" />
+              <input type="hidden" name="登録種別" value="塾向け資料請求・ウェイティングリスト" />
+              <input type="hidden" name="お問い合わせ目的" value="資料請求" />
 
               <div class="form-head">
                 <p class="form-eyebrow">Contact Form</p>
-                <h3>まずは資料だけ、気軽にお受け取りください。</h3>
-                <p>電話番号の入力は不要です。資料請求のみの場合、しつこい営業電話は行いません。ご案内は原則メールでお送りします。</p>
+                <h3>メールアドレスだけで資料請求できます。</h3>
+                <p>ムチモン for 塾の資料や先行案内を、メールでお送りします。</p>
               </div>
-
-              <div class="form-reassurance" aria-label="資料請求後のご案内">
-                <span>電話番号不要</span>
-                <span>資料請求だけなら営業電話なし</span>
-                <span>メールで資料送付</span>
-              </div>
-
-              <fieldset class="form-section purpose-section">
-                <legend>ご希望内容 <span class="required-badge">必須</span></legend>
-                <div class="purpose-cards">
-                  <label>
-                    <input name="お問い合わせ目的" type="radio" value="資料請求" checked required />
-                    <span><strong>資料請求</strong><small>まずは内容だけ確認したい</small></span>
-                  </label>
-                  <label>
-                    <input name="お問い合わせ目的" type="radio" value="無料テスト導入相談" required />
-                    <span><strong>無料テスト導入相談</strong><small>導入条件も相談したい</small></span>
-                  </label>
-                  <label>
-                    <input name="お問い合わせ目的" type="radio" value="導入時期・条件の相談" required />
-                    <span><strong>導入時期・条件の相談</strong><small>人数や運用方法を相談したい</small></span>
-                  </label>
-                  <label>
-                    <input name="お問い合わせ目的" type="radio" value="その他" required />
-                    <span><strong>その他</strong><small>上記以外のご相談</small></span>
-                  </label>
-                </div>
-              </fieldset>
 
               <fieldset class="form-section">
-                <legend>基本情報</legend>
+                <legend>メールアドレス</legend>
                 <div class="form-grid">
-                  <label><span class="label-row">塾名・教室名 <span class="required-badge">必須</span></span>
-                    <input name="塾名・教室名" type="text" autocomplete="organization" placeholder="例：ムチモン学習塾 吉祥寺校" required maxlength="200" />
-                  </label>
-                  <label><span class="label-row">ご担当者名 <span class="required-badge">必須</span></span>
-                    <input name="ご担当者名" type="text" autocomplete="name" placeholder="例：山田 太郎" required maxlength="100" />
-                  </label>
-                  <label>役職
-                    <input name="役職" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" maxlength="100" />
-                  </label>
                   <label><span class="label-row">メールアドレス <span class="required-badge">必須</span></span>
                     <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" required maxlength="200" />
                   </label>
@@ -231,7 +195,22 @@
               </fieldset>
 
               <details class="optional-fields">
-                <summary>任意で詳しい状況を入力する</summary>
+                <summary>任意で塾名や詳しい状況を入力する</summary>
+                <fieldset class="form-section">
+                  <legend>基本情報</legend>
+                  <div class="form-grid">
+                    <label>塾名・教室名
+                      <input name="塾名・教室名" type="text" autocomplete="organization" placeholder="例：ムチモン学習塾 吉祥寺校" maxlength="200" />
+                    </label>
+                    <label>ご担当者名
+                      <input name="ご担当者名" type="text" autocomplete="name" placeholder="例：山田 太郎" maxlength="100" />
+                    </label>
+                    <label>役職
+                      <input name="役職" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" maxlength="100" />
+                    </label>
+                  </div>
+                </fieldset>
+
                 <fieldset class="form-section">
                   <legend>導入イメージ</legend>
                   <div class="form-grid">
@@ -267,12 +246,12 @@
 
               <label class="consent-check">
                 <input name="送信前確認" type="checkbox" value="確認済み" required />
-                <span>資料の受け取りに必要な範囲で情報を送信することに同意します。</span>
+                <span>資料や先行案内をメールで受け取ることに同意します。</span>
               </label>
 
               <div class="form-actions">
                 <button class="primary business-cta" type="submit">資料をメールで受け取る</button>
-                <small>入力いただいたメールアドレス宛に資料のご案内をお送りします。電話番号の入力は不要です。</small>
+                <small>入力いただいたメールアドレス宛に、資料や先行案内をお送りします。</small>
               </div>
               <p class="form-status" aria-live="polite"></p>
             </form>
@@ -334,7 +313,8 @@
 
           const purpose = value("お問い合わせ目的") || "塾向けお問い合わせ";
           const school = value("塾名・教室名") || "未入力";
-          data.set("_subject", `【ムチモン塾向け】${purpose} / ${school}`);
+          const subjectSuffix = school === "未入力" ? value("email") : school;
+          data.set("_subject", `【ムチモン塾向け】${purpose} / ${subjectSuffix}`);
 
           setStatus("loading", "送信しています。少しだけお待ちください。");
           submitButton.disabled = true;
@@ -349,8 +329,6 @@
             if (!response.ok) throw new Error("submit failed");
 
             form.reset();
-            const checkedPurpose = form.querySelector('input[name="お問い合わせ目的"][value="資料請求"]');
-            if (checkedPurpose) checkedPurpose.checked = true;
             setStatus("success", "資料請求を受け付けました。入力いただいたメールアドレス宛に資料のご案内をお送りします。");
           } catch {
             setStatus("error", "送信できませんでした。時間をおいて再度お試しください。");

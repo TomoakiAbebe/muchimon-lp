@@ -416,27 +416,6 @@
   text-transform: uppercase;
 }
 
-.form-reassurance {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.form-reassurance span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 32px;
-  border: 1px solid rgba(6, 199, 85, .24);
-  border-radius: 999px;
-  background: rgba(234, 247, 238, .9);
-  color: var(--green-dark);
-  font-size: .82rem;
-  font-weight: 950;
-  line-height: 1.2;
-  padding: 7px 11px;
-  white-space: nowrap;
-}
-
 .form-section {
   display: grid;
   gap: 14px;
@@ -477,69 +456,9 @@
   padding: 0 8px;
 }
 
-.purpose-section {
-  background: linear-gradient(180deg, #f4fbff 0%, #fff 100%);
-}
-
-.purpose-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.purpose-cards label {
-  position: relative;
-  display: grid;
-  grid-template-columns: 22px minmax(0, 1fr);
-  align-items: center;
-  gap: 10px;
-  min-height: 86px;
-  border: 1px solid rgba(23, 136, 212, .18);
-  border-radius: 12px;
-  background: #fff;
-  cursor: pointer;
-  padding: 14px;
-  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
-}
-
-.purpose-cards label:hover {
-  border-color: rgba(23, 136, 212, .48);
-  box-shadow: 0 12px 24px rgba(23, 136, 212, .12);
-  transform: translateY(-1px);
-}
-
-.purpose-cards input {
-  width: 20px;
-  min-height: 20px;
-  accent-color: var(--blue);
-}
-
-.purpose-cards label:has(input:checked) {
-  border-color: var(--blue);
-  background: linear-gradient(180deg, rgba(244, 251, 255, .96), #fff);
-  box-shadow: 0 0 0 4px rgba(23, 136, 212, .12);
-}
-
-.purpose-cards strong {
-  display: block;
-  color: var(--ink);
-  font-size: .96rem;
-  font-weight: 950;
-  line-height: 1.35;
-}
-
-.purpose-cards small {
-  display: block;
-  margin-top: 4px;
-  color: #52625c;
-  font-size: .8rem;
-  font-weight: 850;
-  line-height: 1.45;
-}
-
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 14px;
 }
 
@@ -767,8 +686,7 @@
 
   .scenario-grid,
   .fit-list,
-  .form-grid,
-  .purpose-cards {
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
@@ -779,10 +697,6 @@
 
   .form-section {
     padding: 16px;
-  }
-
-  .purpose-cards label {
-    min-height: auto;
   }
 
   .contact-toggle summary {
