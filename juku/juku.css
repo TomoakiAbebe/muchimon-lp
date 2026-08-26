@@ -416,6 +416,27 @@
   text-transform: uppercase;
 }
 
+.form-reassurance {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.form-reassurance span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  border: 1px solid rgba(6, 199, 85, .24);
+  border-radius: 999px;
+  background: rgba(234, 247, 238, .9);
+  color: var(--green-dark);
+  font-size: .82rem;
+  font-weight: 950;
+  line-height: 1.2;
+  padding: 7px 11px;
+  white-space: nowrap;
+}
+
 .form-section {
   display: grid;
   gap: 14px;
@@ -425,6 +446,27 @@
   background: linear-gradient(180deg, rgba(244, 251, 255, .62), rgba(255, 253, 248, .92));
   margin: 0;
   padding: 18px;
+}
+
+.optional-fields {
+  display: grid;
+  gap: 14px;
+  border: 1px dashed rgba(23, 136, 212, .28);
+  border-radius: 14px;
+  background: rgba(244, 251, 255, .58);
+  padding: 14px;
+}
+
+.optional-fields summary {
+  cursor: pointer;
+  color: var(--blue);
+  font-weight: 950;
+  line-height: 1.35;
+  list-style-position: inside;
+}
+
+.optional-fields[open] summary {
+  margin-bottom: 12px;
 }
 
 .form-section legend {

@@ -9,7 +9,7 @@
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="../styles.css?v=20260819-history1" />
-    <link rel="stylesheet" href="./juku.css?v=20260826-juku4" />
+    <link rel="stylesheet" href="./juku.css?v=20260826-juku5" />
   </head>
   <body>
     <header class="nav">
@@ -157,15 +157,15 @@
             <p>無料テスト導入や資料請求をご希望の方は、下記よりお問い合わせください。対象学年、導入人数、利用シーンに合わせてご案内します。</p>
           </div>
           <div class="line-steps">
-            <div><span>1</span>お問い合わせ</div>
-            <div><span>2</span>導入条件の確認</div>
-            <div><span>3</span>無料テスト開始</div>
+            <div><span>1</span>資料請求</div>
+            <div><span>2</span>メールでご案内</div>
+            <div><span>3</span>希望者のみ相談</div>
           </div>
           <details class="contact-toggle" id="juku-contact">
             <summary>
               <span>
                 <small>Contact Form</small>
-                <strong>問い合わせフォームを開く</strong>
+                <strong>30秒で資料請求する</strong>
               </span>
               <span class="toggle-icon" aria-hidden="true"></span>
             </summary>
@@ -174,25 +174,32 @@
               <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="【ムチモン塾向け】お問い合わせ" />
+              <input type="hidden" name="_subject" value="【ムチモン塾向け】資料請求" />
               <input type="hidden" name="送信元ページ" value="muchimon.jp/juku" />
+              <input type="hidden" name="連絡方針" value="資料請求のみの場合、しつこい営業電話は行いません。ご案内は原則メールでお送りします。" />
 
               <div class="form-head">
                 <p class="form-eyebrow">Contact Form</p>
-                <h3>お問い合わせ内容を教えてください</h3>
-                <p>目的や導入イメージを選ぶだけで、運営側が確認しやすい内容に整理されます。</p>
+                <h3>まずは資料だけ、気軽にお受け取りください。</h3>
+                <p>電話番号の入力は不要です。資料請求のみの場合、しつこい営業電話は行いません。ご案内は原則メールでお送りします。</p>
+              </div>
+
+              <div class="form-reassurance" aria-label="資料請求後のご案内">
+                <span>電話番号不要</span>
+                <span>資料請求だけなら営業電話なし</span>
+                <span>メールで資料送付</span>
               </div>
 
               <fieldset class="form-section purpose-section">
-                <legend>お問い合わせ目的 <span class="required-badge">必須</span></legend>
+                <legend>ご希望内容 <span class="required-badge">必須</span></legend>
                 <div class="purpose-cards">
                   <label>
-                    <input name="お問い合わせ目的" type="radio" value="無料テスト導入相談" checked required />
-                    <span><strong>無料テスト導入相談</strong><small>まずは試したい塾様向け</small></span>
+                    <input name="お問い合わせ目的" type="radio" value="資料請求" checked required />
+                    <span><strong>資料請求</strong><small>まずは内容だけ確認したい</small></span>
                   </label>
                   <label>
-                    <input name="お問い合わせ目的" type="radio" value="資料請求" required />
-                    <span><strong>資料請求</strong><small>検討資料を受け取りたい</small></span>
+                    <input name="お問い合わせ目的" type="radio" value="無料テスト導入相談" required />
+                    <span><strong>無料テスト導入相談</strong><small>導入条件も相談したい</small></span>
                   </label>
                   <label>
                     <input name="お問い合わせ目的" type="radio" value="導入時期・条件の相談" required />
@@ -220,59 +227,52 @@
                   <label><span class="label-row">メールアドレス <span class="required-badge">必須</span></span>
                     <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" required maxlength="200" />
                   </label>
-                  <label>電話番号
-                    <input name="電話番号" type="tel" autocomplete="tel" placeholder="例：03-0000-0000" maxlength="50" />
-                  </label>
-                  <label>希望する連絡方法
-                    <select name="希望する連絡方法">
-                      <option value="メール">メール</option>
-                      <option value="電話">電話</option>
-                      <option value="どちらでも可">どちらでも可</option>
-                    </select>
-                  </label>
                 </div>
               </fieldset>
 
-              <fieldset class="form-section">
-                <legend>導入イメージ</legend>
-                <div class="form-grid">
-                  <label>対象学年・人数
-                    <input name="対象学年・人数" type="text" placeholder="例：小4〜中2、30名ほど" maxlength="200" />
-                  </label>
-                  <label>希望時期
-                    <select name="希望時期">
-                      <option value="未定">未定</option>
-                      <option value="できるだけ早く">できるだけ早く</option>
-                      <option value="1か月以内">1か月以内</option>
-                      <option value="3か月以内">3か月以内</option>
-                      <option value="次学期・次年度から">次学期・次年度から</option>
-                    </select>
-                  </label>
-                </div>
-                <div class="checkbox-group">
-                  <p>気になっている課題</p>
-                  <label><input name="気になっている課題" type="checkbox" value="家庭学習が続かない" />家庭学習が続かない</label>
-                  <label><input name="気になっている課題" type="checkbox" value="保護者対応の負担が大きい" />保護者対応の負担が大きい</label>
-                  <label><input name="気になっている課題" type="checkbox" value="講師ごとの指導差を補いたい" />講師ごとの指導差を補いたい</label>
-                  <label><input name="気になっている課題" type="checkbox" value="勉強が苦手な生徒を支援したい" />勉強が苦手な生徒を支援したい</label>
-                </div>
-              </fieldset>
+              <details class="optional-fields">
+                <summary>任意で詳しい状況を入力する</summary>
+                <fieldset class="form-section">
+                  <legend>導入イメージ</legend>
+                  <div class="form-grid">
+                    <label>対象学年・人数
+                      <input name="対象学年・人数" type="text" placeholder="例：小4〜中2、30名ほど" maxlength="200" />
+                    </label>
+                    <label>希望時期
+                      <select name="希望時期">
+                        <option value="未定">未定</option>
+                        <option value="できるだけ早く">できるだけ早く</option>
+                        <option value="1か月以内">1か月以内</option>
+                        <option value="3か月以内">3か月以内</option>
+                        <option value="次学期・次年度から">次学期・次年度から</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="checkbox-group">
+                    <p>気になっている課題</p>
+                    <label><input name="気になっている課題" type="checkbox" value="家庭学習が続かない" />家庭学習が続かない</label>
+                    <label><input name="気になっている課題" type="checkbox" value="保護者対応の負担が大きい" />保護者対応の負担が大きい</label>
+                    <label><input name="気になっている課題" type="checkbox" value="講師ごとの指導差を補いたい" />講師ごとの指導差を補いたい</label>
+                    <label><input name="気になっている課題" type="checkbox" value="勉強が苦手な生徒を支援したい" />勉強が苦手な生徒を支援したい</label>
+                  </div>
+                </fieldset>
 
-              <fieldset class="form-section">
-                <legend>相談内容</legend>
-                <label class="form-full"><span class="label-row">現在困っていること・相談内容 <span class="required-badge">必須</span></span>
-                  <textarea name="message" placeholder="例：家庭学習が続かない生徒への無料テスト導入を相談したい" required maxlength="5000"></textarea>
-                </label>
-              </fieldset>
+                <fieldset class="form-section">
+                  <legend>相談内容</legend>
+                  <label class="form-full">現在困っていること・相談内容
+                    <textarea name="message" placeholder="例：家庭学習が続かない生徒への無料テスト導入を相談したい" maxlength="5000"></textarea>
+                  </label>
+                </fieldset>
+              </details>
 
               <label class="consent-check">
                 <input name="送信前確認" type="checkbox" value="確認済み" required />
-                <span>入力内容を確認し、送信することに同意します。</span>
+                <span>資料の受け取りに必要な範囲で情報を送信することに同意します。</span>
               </label>
 
               <div class="form-actions">
-                <button class="primary business-cta" type="submit">この内容で送信する</button>
-                <small>メール作成画面を開かず、このページ内でお問い合わせを送信できます。</small>
+                <button class="primary business-cta" type="submit">資料をメールで受け取る</button>
+                <small>入力いただいたメールアドレス宛に資料のご案内をお送りします。電話番号の入力は不要です。</small>
               </div>
               <p class="form-status" aria-live="polite"></p>
             </form>
@@ -349,9 +349,9 @@
             if (!response.ok) throw new Error("submit failed");
 
             form.reset();
-            const checkedPurpose = form.querySelector('input[name="お問い合わせ目的"][value="無料テスト導入相談"]');
+            const checkedPurpose = form.querySelector('input[name="お問い合わせ目的"][value="資料請求"]');
             if (checkedPurpose) checkedPurpose.checked = true;
-            setStatus("success", "お問い合わせを受け付けました。内容を確認のうえ、担当者よりご連絡します。");
+            setStatus("success", "資料請求を受け付けました。入力いただいたメールアドレス宛に資料のご案内をお送りします。");
           } catch {
             setStatus("error", "送信できませんでした。時間をおいて再度お試しください。");
           } finally {
