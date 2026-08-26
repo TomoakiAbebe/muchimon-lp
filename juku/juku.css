@@ -301,13 +301,120 @@
 
 .juku-contact-form {
   display: grid;
-  gap: 16px;
+  gap: 18px;
   border: 1px solid rgba(255, 255, 255, .58);
   border-radius: 16px;
   background: rgba(255, 255, 255, .96);
   color: var(--ink);
   padding: clamp(18px, 4vw, 28px);
   box-shadow: 0 18px 42px rgba(26, 36, 41, .16);
+}
+
+.form-head {
+  display: grid;
+  gap: 8px;
+}
+
+.form-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.28rem, 2vw, 1.75rem);
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.form-head p {
+  margin: 0;
+  color: #52625c;
+  font-weight: 800;
+  line-height: 1.65;
+}
+
+.form-eyebrow {
+  color: var(--blue) !important;
+  font-size: .78rem;
+  font-weight: 950 !important;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.form-section {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+  border: 1px solid rgba(124, 103, 75, .16);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(244, 251, 255, .62), rgba(255, 253, 248, .92));
+  margin: 0;
+  padding: 18px;
+}
+
+.form-section legend {
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.35;
+  padding: 0 8px;
+}
+
+.purpose-section {
+  background: linear-gradient(180deg, #f4fbff 0%, #fff 100%);
+}
+
+.purpose-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.purpose-cards label {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 86px;
+  border: 1px solid rgba(23, 136, 212, .18);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  padding: 14px;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.purpose-cards label:hover {
+  border-color: rgba(23, 136, 212, .48);
+  box-shadow: 0 12px 24px rgba(23, 136, 212, .12);
+  transform: translateY(-1px);
+}
+
+.purpose-cards input {
+  width: 20px;
+  min-height: 20px;
+  accent-color: var(--blue);
+}
+
+.purpose-cards label:has(input:checked) {
+  border-color: var(--blue);
+  background: linear-gradient(180deg, rgba(244, 251, 255, .96), #fff);
+  box-shadow: 0 0 0 4px rgba(23, 136, 212, .12);
+}
+
+.purpose-cards strong {
+  display: block;
+  color: var(--ink);
+  font-size: .96rem;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.purpose-cards small {
+  display: block;
+  margin-top: 4px;
+  color: #52625c;
+  font-size: .8rem;
+  font-weight: 850;
+  line-height: 1.45;
 }
 
 .form-grid {
@@ -326,11 +433,32 @@
   text-align: left;
 }
 
-.juku-contact-form input,
+.label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.required-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  border-radius: 999px;
+  background: rgba(231, 71, 63, .1);
+  color: var(--red);
+  font-size: .7rem;
+  font-weight: 950;
+  line-height: 1;
+  padding: 4px 7px;
+  vertical-align: middle;
+}
+
+.juku-contact-form input:not([type="radio"]):not([type="checkbox"]),
 .juku-contact-form select,
 .juku-contact-form textarea {
   width: 100%;
-  min-height: 48px;
+  min-height: 52px;
   border: 1px solid rgba(124, 103, 75, .22);
   border-radius: 10px;
   background: #fff;
@@ -341,7 +469,7 @@
   padding: 10px 12px;
 }
 
-.juku-contact-form input:focus,
+.juku-contact-form input:not([type="radio"]):not([type="checkbox"]):focus,
 .juku-contact-form select:focus,
 .juku-contact-form textarea:focus {
   border-color: var(--blue);
@@ -349,13 +477,58 @@
   outline: none;
 }
 
+.juku-contact-form input:not([type="radio"]):not([type="checkbox"])::placeholder,
+.juku-contact-form textarea::placeholder {
+  color: rgba(82, 98, 92, .58);
+}
+
 .juku-contact-form textarea {
-  min-height: 118px;
+  min-height: 136px;
   resize: vertical;
 }
 
 .form-full {
   grid-column: 1 / -1;
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 10px;
+}
+
+.checkbox-group p {
+  margin: 0;
+  color: #31413b;
+  font-size: .94rem;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.checkbox-group label,
+.consent-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(124, 103, 75, .14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .82);
+  color: #31413b;
+  font-weight: 900;
+  line-height: 1.45;
+  padding: 12px;
+}
+
+.checkbox-group input,
+.consent-check input {
+  flex: 0 0 auto;
+  width: 18px;
+  min-height: 18px;
+  accent-color: var(--blue);
+}
+
+.consent-check {
+  border-color: rgba(23, 136, 212, .2);
+  background: rgba(244, 251, 255, .9);
 }
 
 .form-actions {
@@ -375,6 +548,12 @@
   color: #52625c;
   font-weight: 800;
   line-height: 1.6;
+}
+
+.form-actions small strong {
+  color: var(--blue);
+  font-weight: 950;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1100px) {
@@ -432,13 +611,22 @@
 
   .scenario-grid,
   .fit-list,
-  .form-grid {
+  .form-grid,
+  .purpose-cards {
     grid-template-columns: 1fr;
   }
 
   .scenario-grid article,
   .value-list article {
     padding: 20px;
+  }
+
+  .form-section {
+    padding: 16px;
+  }
+
+  .purpose-cards label {
+    min-height: auto;
   }
 
   .juku-mascot {
