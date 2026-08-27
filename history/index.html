@@ -196,6 +196,42 @@
       .episode h3 { font-size: clamp(1.28rem, 2.2vw, 2rem); line-height: 1.28; }
       .episode p { margin: 14px 0 0; }
 
+      .instagram-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-top: 28px;
+        border: 1px solid rgba(124, 103, 75, .16);
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, .96) 0%, rgba(255, 247, 253, .95) 45%, rgba(239, 251, 255, .95) 100%);
+        padding: clamp(20px, 4vw, 30px);
+        box-shadow: 0 12px 34px rgba(54, 43, 26, .08);
+      }
+      .instagram-card h3 {
+        margin: 8px 0 0;
+        font-size: clamp(1.28rem, 2.4vw, 2rem);
+        line-height: 1.32;
+      }
+      .instagram-card p:not(.kicker) {
+        max-width: 620px;
+        margin: 10px 0 0;
+      }
+      .instagram-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        flex: 0 0 auto;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
+        color: #fff;
+        font-weight: 950;
+        line-height: 1.2;
+        padding: 14px 22px;
+        box-shadow: 0 16px 30px rgba(221, 42, 123, .22);
+      }
+
       .profile-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -267,6 +303,8 @@
         .section h2 { font-size: clamp(1.75rem, 7.2vw, 2.35rem); line-height: 1.22; }
         .episode, .fact, .profile-card { padding: 18px; }
         .episode img, .gallery-grid img { border-width: 5px; }
+        .instagram-card { align-items: flex-start; flex-direction: column; }
+        .instagram-link { width: 100%; }
         .gallery-grid { grid-template-columns: 1fr 1fr; }
         .cta img { max-height: 180px; }
         .site-footer { padding: 34px 18px 22px; }
@@ -349,6 +387,14 @@
               <img src="../assets/history/muchimon_birth_15_15.png" alt="博士とムチモンとユーザーの奇妙な学習生活が始まる様子" />
               <div><small>Episode 7</small><h3>奇妙な協力関係のスタート</h3><p>博士は少し悔しそうに、あなたをムチモンの専属の先生に任命します。こうして、嫉妬しながらもヒントをくれる博士、ポンコツだけど素直なムチモン、そして唯一の理解者であるあなたの学習生活が始まります。</p></div>
             </article>
+          </div>
+          <div class="instagram-card">
+            <div>
+              <p class="kicker">Instagram</p>
+              <h3>ムチモンについてはInstagramで発信しています。</h3>
+              <p>誕生ストーリーやキャラクター紹介、開発中のムチモンの様子を投稿しています。</p>
+            </div>
+            <a class="instagram-link" href="https://www.instagram.com/muchimon_minakano/?hl=ja" target="_blank" rel="noopener">Instagramを見る</a>
           </div>
         </div>
       </section>
