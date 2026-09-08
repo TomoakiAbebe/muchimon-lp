@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./styles.css?v=20260819-history1" />
     <link rel="stylesheet" href="./story-teaser.css?v=20260819-history1" />
     <link rel="stylesheet" href="./hero-mobile.css?v=20260821-hero1" />
+    <link rel="stylesheet" href="./refinement.css?v=20260908" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -104,7 +105,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="refined parent-page">
     <header class="nav">
       <a class="logo" href="#top"><img src="./assets/muchimon-logo.png" alt="ムチモン" /></a>
       <nav>
@@ -123,14 +124,15 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="kicker">サービスリリース前 公式LINE先行案内</p>
-          <h1 aria-label="「勉強しなさい」も「ここ教えて」も、ムチモンがとなりで支える。"><span class="title-line">「勉強しなさい」も</span><span class="title-line">「ここ教えて」も、</span><span class="title-line">ムチモンがとなりで</span><span class="title-line">支える。</span></h1>
-          <p class="lead">小学生の算数に対応。問題を撮影するだけで、ムチモンが声をかけながら、ヒント、解説、類題、学習ログまでつなげます。</p>
+          <p class="kicker">小学生の家庭学習に、AIの伴走者を。</p>
+          <p class="hero-brand">ムチモン<span>学習伴走AI</span></p>
+          <h1><span class="phrase">「勉強しなさい」が、</span><span class="phrase accent">少し減る毎日へ。</span></h1>
+          <p class="lead">「ここ教えて」に、すぐ応えられない日も。<br class="desktop-break" />ムチモンが声をかけ、ヒントや解説で、子どもの算数をとなりで支えます。</p>
           <div class="actions">
             <a class="primary line-button" href="https://lin.ee/755YFJo" target="_blank" rel="noopener" data-track="line-register"><span class="line-icon">LINE</span><span><strong>LINEで友だち追加</strong><small>リリース通知を受け取る</small></span><span class="cta-arrow">→</span></a>
             <a class="secondary" href="#flow">使い方を見る</a>
-            <a class="secondary juku-link" href="./juku/">塾向けの導入はこちら</a>
           </div>
+          <p class="hero-note">サービスリリース前・公式LINEで公開をお知らせ</p>
           <div class="proof">
             <div><strong>リリース前</strong><span>公式LINEで先行通知</span></div>
             <div><strong><span class="price-prefix">月額</span><span class="price-number">1,280</span><span class="price-unit">円</span></strong><span>個人・家庭利用 税込</span></div>
@@ -140,7 +142,7 @@
         <div class="hero-visual">
           <div class="ipad-frame hero-ipad"><div class="ipad-camera"></div><div class="ipad-screen"><img src="./assets/muchimon-upload.png" alt="ムチモンの学習画面" /></div></div>
           <img class="mascot" src="./assets/muchimon-character.png" alt="ムチモン" />
-          <div class="bubble"><span>ムチモン</span><strong>今日はどの問題かな？まずは写真を送ってね。</strong></div>
+          <div class="bubble"><span>ひとりで悩む時間を、一緒に考える時間へ。</span><strong>「どこで迷った？」から、はじめよう。</strong></div>
         </div>
       </section>
 
@@ -157,8 +159,8 @@
 
       <section class="section problems">
         <div>
-          <p class="kicker">Parent Pain</p>
-          <h2>家庭学習でつまずくのは、問題そのものだけではありません。</h2>
+          <p class="kicker">毎日の宿題、こんなことはありませんか？</p>
+          <h2><span class="phrase">教えたい気持ちはある。</span><span class="phrase">でも、余裕がない日もある。</span></h2>
         </div>
         <div class="cards three">
           <article><span>01</span><h3>毎日「勉強しなさい」と言ってしまう</h3><p>声をかけるほど、子どもの表情が重くなる。家庭学習の入口で親子の負担が増えてしまいます。</p></article>
@@ -173,7 +175,7 @@
       <section class="section features">
         <div class="heading">
           <p class="kicker">Why Muchimon</p>
-          <h2>ムチモンは、算数で手が止まった瞬間の伴走役です。</h2>
+          <h2><span class="phrase">手が止まったら、</span><span class="phrase">ムチモンの出番。</span></h2>
           <p>教材を全部置き換えるのではなく、毎日の宿題や問題演習で止まったところに寄り添います。</p>
         </div>
         <div class="cards three">
@@ -186,7 +188,7 @@
       <section class="section story-teaser">
         <div>
           <p class="kicker">Character Story</p>
-          <h2>ムチモンは、知識を教えてもらうほど成長するポンコツAIロボット。</h2>
+          <h2><span class="phrase">教えて、教わって。</span><span class="phrase">一緒に育つ、ともだち。</span></h2>
           <p>町外れの研究所で生まれたムチモン。世界一の学習AIになるはずが、完成祝いのコーヒー事件で少しポンコツに。ユーザーのかみ砕いた説明を受け取って、少しずつ成長していきます。</p>
           <a class="secondary" href="./history/">ムチモンのものがたりを読む</a>
         </div>
@@ -201,7 +203,7 @@
       <section class="section flow" id="flow">
         <div class="heading">
           <p class="kicker">How it works</p>
-          <h2>問題を撮ってから学習ログまで、5ステップでわかります。</h2>
+          <h2><span class="phrase">いつもの宿題から、</span><span class="phrase">「できた」までの5ステップ。</span></h2>
         </div>
         <div class="steps">
           <article><span>01</span><h3>問題を撮影</h3><p>小学生の算数で手が止まった問題を、スマートフォンでそのまま送れます。</p></article>
@@ -248,12 +250,12 @@
         <div class="heading trust-heading">
           <p class="kicker">Trust</p>
           <h2><span class="nowrap">株式会社ミナカノ</span>が開発しています。</h2>
-          <p>公式HPでは、「みんなの可能性を広げる」というビジョンのもと、教育ITサービス・教育関連アプリの企画、開発、運用に取り組む会社として紹介されています。</p>
+          <p>株式会社ミナカノは、次世代の教育を切り拓くスタートアップ企業です。「みんなの可能性を広げる」をMissionに掲げ、子どもたち一人ひとりに寄り添う教育システムの開発・提供に取り組んでいます。</p>
         </div>
         <div class="trust-grid">
-          <article><span>Vision</span><h3>みんなの可能性を広げる</h3><p>子どもたち一人ひとりが、自分のペースで学びに向き合える環境づくりを目指しています。</p></article>
-          <article><span>Learning</span><h3>誰一人取り残さない学びへ</h3><p>生成AIを用いた個別最適な学びを通じて、つまずきに寄り添う学習体験をつくっています。</p></article>
-          <article><span>Service</span><h3>教育ITサービスを開発</h3><p>教育関連アプリの企画・開発・運用を行う会社として、ムチモンの開発を進めています。</p></article>
+          <article><span>Mission</span><h3>みんなの可能性を広げる</h3><p>すべての子どもたちが、自分らしく学べる環境づくりに挑戦し続けています。</p></article>
+          <article><span>Vision</span><h3>個別最適な学びの実現</h3><p>生成AIを活用し、子ども一人ひとりに合わせた学習体験を届けることを目指しています。</p></article>
+          <article><span>Product</span><h3>教育プロダクトを開発</h3><p>教育ITサービスや教育関連アプリの企画・開発・運営を通じて、ムチモンの開発を進めています。</p></article>
         </div>
         <a class="trust-link" href="https://minakano.co.jp/" target="_blank" rel="noopener">株式会社ミナカノの公式HPを見る</a>
       </section>
