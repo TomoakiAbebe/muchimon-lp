@@ -1,0 +1,112 @@
+.juku-page {
+  --ink: #153452;
+  --muted: #536979;
+  --blue: #0869b1;
+  --line: #dbe6eb;
+}
+.juku-page .juku-hero { background: #f0faff; padding-block: 32px 28px; gap: 24px; }
+.juku-page .juku-hero-visual { max-width: 510px; }
+.juku-page .juku-hero .kicker { color: #0869b1; margin-bottom: 20px; }
+.juku-page .juku-hero h1 { font-size: 2.75rem; line-height: 1.55; }
+.juku-page .juku-hero h1 .phrase { display: block; }
+.juku-page .juku-hero .accent { color: #153452; text-decoration: underline; text-decoration-color: #ffe37e; text-decoration-thickness: 8px; text-underline-offset: 5px; }
+.juku-page .hero-subtitle { font-size: 1.375rem; font-weight: 700; margin: 20px 0 0; line-height: 1.8; }
+.juku-page .lead { max-width: 720px; }
+.juku-page .business-cta { background: #0869b1; border-color: #0869b1; }
+.juku-page .business-cta:hover { background: #07528a; }
+.juku-page .juku-strip { background: #fff7d5; }
+.juku-page .juku-strip p { font-size: 1.125rem; }
+.juku-page .scenario-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.juku-page .scenario-grid article { padding: 24px 0; border-radius: 0; border-top: 2px solid #bddce9; background: none; }
+.juku-page .scenario-grid h3 { font-size: 1.0625rem; }
+.juku-page .scenario-grid p { font-size: .9375rem; }
+.juku-page .juku-value { background: #f0f9fc; }
+.juku-page .value-list article:nth-child(2) strong { color: #16784f; }
+.juku-page .value-list article { padding-block: 24px; }
+.juku-page .juku-flow { background: #fff; }
+.juku-page .steps span { background: #0869b1; color: white; }
+.juku-page .steps h3 { font-size: 1rem; }
+.juku-page .classroom-report { background: #edf8f2; }
+.report-layout { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 48px; align-items: center; margin-top: 40px; }
+.teacher-preview { margin: 0; min-width: 0; }
+.teacher-screen { background: #f8fcfa; padding: 24px; border-radius: 10px; color: #153452; }
+.report-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-bottom: 1px solid #d4e7dc; padding-bottom: 14px; }
+.report-top > strong { font-size: 1.125rem; }
+.report-top > span { color: #fff; background: #29804e; padding: 2px 18px; border-radius: 4px; font-size: .75rem; }
+.report-period { font-weight: 700; font-size: .875rem; margin: 16px 0 12px; }
+.report-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin-bottom: 18px; }
+.report-metrics > div { border-left: 3px solid #89c5a0; padding-left: 10px; }
+.report-metrics small { display: block; color: #536979; font-size: .6875rem; }
+.report-metrics strong { font-size: .8125rem; display: block; }
+.report-detail { padding: 12px 0; border-top: 1px solid #d4e7dc; font-size: .8125rem; }
+.report-detail p { margin: 4px 0 0; }
+.report-hint { border-top: 3px solid #e7c75f; background: #fff9e5; padding: 14px; font-size: .8125rem; margin-top: 8px; }
+.report-hint p { margin: 4px 0 0; }
+.teacher-preview figcaption { font-size: .75rem; color: #536979; margin-top: 14px; text-align: center; }
+.report-points { margin: 0; padding: 0; list-style: none; }
+.report-points li { display: flex; gap: 16px; border-bottom: 1px solid #cde2d7; padding: 18px 0; }
+.report-points li > span { color: #29804e; font-size: .875rem; font-weight: 700; padding-top: 2px; }
+.report-points h3 { margin: 0; font-size: 1rem; line-height: 1.7; }
+.report-points p { font-size: .875rem; color: #536979; margin: 4px 0 0; }
+.juku-page .classroom-compare { background: #fff; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 24px; margin-top: 40px; }
+.comparison-grid article { border-top: 3px solid #afc4d2; padding: 24px 0; }
+.comparison-grid h3 { font-size: 1.125rem; margin: 0 0 20px; }
+.comparison-grid p { margin: 10px 0; color: #536979; }
+.comparison-grid .muchimon-difference { border-color: #258553; }
+.muchimon-difference h3 { color: #16784f; }
+.muchimon-difference ul { margin: 0 0 16px; padding-left: 1.2em; }
+.muchimon-difference li { padding-bottom: 8px; }
+.compatible { font-size: .875rem; background: #fff0a9; display: inline-block; padding: 6px 12px; }
+.comparison-note { color: #536979; font-size: .75rem; margin-top: 12px; }
+.juku-page .classroom-benefits { background: #f3f8fa; }
+.benefits-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; margin-top: 36px; }
+.benefits-grid article { border-top: 2px solid #2785bc; padding-top: 20px; }
+.benefits-grid article:nth-child(2) { border-color: #32875a; }
+.benefits-grid article:nth-child(3) { border-color: #d39324; }
+.benefits-grid span { font-size: .875rem; font-weight: 700; color: #0869b1; }
+.benefits-grid article:nth-child(2) span { color: #16784f; }
+.benefits-grid article:nth-child(3) span { color: #97600d; }
+.benefits-grid h3 { margin: 10px 0; font-size: 1.125rem; line-height: 1.7; }
+.benefits-grid p { color: #536979; margin: 0; }
+@media (max-width: 1100px) {
+  .juku-page .scenario-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px 32px; }
+  .juku-page .juku-hero h1 { font-size: 2.375rem; }
+  .report-layout { gap: 28px; }
+  .teacher-screen { padding: 18px; }
+}
+@media (max-width: 800px) {
+  .juku-page .juku-hero h1 { font-size: 2rem; }
+  .juku-page .hero-subtitle { font-size: 1.125rem; }
+  .report-layout { grid-template-columns: minmax(0,1fr); }
+  .teacher-preview { max-width: 620px; width: 100%; margin-inline: auto; }
+  .report-points { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 24px; }
+  .comparison-grid { grid-template-columns: 1fr 1fr; }
+  .comparison-grid .muchimon-difference { grid-column: 1 / -1; }
+  .benefits-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 540px) {
+  .juku-page .nav nav a[href="#report"] { display: none; }
+  .juku-page .juku-hero { padding-block: 32px; }
+  .juku-page .hero-brand { flex-wrap: wrap; gap: 8px; }
+  .juku-page .hero-brand span { font-size: .75rem; }
+  .juku-page .juku-hero h1 { font-size: 1.5rem; line-height: 1.8; }
+  .juku-page .juku-hero .accent { text-decoration-thickness: 5px; text-underline-offset: 4px; }
+  .juku-page .hero-subtitle { font-size: 1rem; }
+  .juku-page .hero-subtitle .phrase { display: block; }
+  .juku-page .juku-hero .kicker { font-size: .75rem; }
+  .juku-page .scenario-grid { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .juku-page .scenario-grid article { padding: 20px 0; }
+  .report-points { grid-template-columns: minmax(0,1fr); }
+  .teacher-screen { padding: 14px; }
+  .report-metrics { grid-template-columns: 1fr; gap: 12px; }
+  .report-metrics > div { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .report-layout { margin-top: 24px; }
+  .comparison-grid { grid-template-columns: minmax(0,1fr); gap: 8px; margin-top: 24px; }
+  .comparison-grid .muchimon-difference { grid-column: auto; }
+  .comparison-grid article { padding-block: 20px; }
+  .comparison-grid h3 { margin-bottom: 12px; }
+}
+@media (max-width: 360px) {
+  .juku-page .juku-hero h1 { font-size: 1.3125rem; }
+}

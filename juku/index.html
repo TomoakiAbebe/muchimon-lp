@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ムチモン for 塾｜家庭学習の習慣化・宿題未提出対策アプリ</title>
-    <meta name="description" content="ムチモン for 塾は、家庭学習が続かない生徒にAIキャラクターが宿題の解説・類似問題・声かけを行い、塾の外でも学習習慣の定着を支援する塾向け学習習慣化アプリです。無料テスト導入を受付中です。" />
+    <title>ムチモン for 塾｜家庭学習と講師の声かけをつなぐAI学習伴走サービス</title>
+    <meta name="description" content="宿題を出してもやってこない、家庭で学習を行わない生徒への対応に悩む塾へ。ムチモンは会話で家庭学習への取り組みを促し、レポートを講師の声かけにつなぐAI学習伴走サービスです。小学4〜6年生対象。試験導入や価格はお問い合わせください。" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://muchimon.jp/juku/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ムチモン" />
-    <meta property="og:title" content="ムチモン for 塾｜家庭学習の習慣化・宿題未提出対策アプリ" />
-    <meta property="og:description" content="宿題未提出や家庭学習の定着に課題を感じる中小規模塾向けに、AIキャラクターが塾の外の学習を支援します。" />
+    <meta property="og:title" content="ムチモン for 塾｜家庭学習と講師の声かけをつなぐAI学習伴走サービス" />
+    <meta property="og:description" content="宿題を出してもやってこない生徒の家庭学習を支援。会話で取り組みを促し、レポートで講師の次の声かけにつなぎます。" />
     <meta property="og:url" content="https://muchimon.jp/juku/" />
     <meta property="og:image" content="https://muchimon.jp/assets/muchimon-motivation.png" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ムチモン for 塾｜家庭学習の習慣化・宿題未提出対策アプリ" />
-    <meta name="twitter:description" content="宿題未提出や家庭学習の定着に課題を感じる中小規模塾向けに、AIキャラクターが塾の外の学習を支援します。" />
+    <meta name="twitter:title" content="ムチモン for 塾｜家庭学習と講師の声かけをつなぐAI学習伴走サービス" />
+    <meta name="twitter:description" content="宿題を出してもやってこない生徒の家庭学習を支援。会話で取り組みを促し、レポートで講師の次の声かけにつなぎます。" />
     <meta name="twitter:image" content="https://muchimon.jp/assets/muchimon-motivation.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../styles.css?v=20260819-history1" />
     <link rel="stylesheet" href="./juku.css?v=20260826-juku6" />
     <link rel="stylesheet" href="../refinement.css?v=20260908" />
+    <link rel="stylesheet" href="./classroom.css?v=20261027" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -38,9 +39,9 @@
             "@type": "Service",
             "@id": "https://muchimon.jp/juku/#service",
             "name": "ムチモン for 塾",
-            "serviceType": "塾向け学習習慣化アプリ",
+            "serviceType": "塾向けAI学習伴走サービス",
             "url": "https://muchimon.jp/juku/",
-            "description": "家庭学習が続かない生徒に対して、AIキャラクターが宿題の解説・類似問題・声かけを行い、塾の外でも学習習慣の定着を支援します。",
+            "description": "家庭で学習を行わない小学4〜6年生を対象に、AIキャラクターとの会話で宿題への取り組みと家庭学習の継続を支え、レポートを講師の個別の声かけにつなげます。",
             "provider": {
               "@id": "https://muchimon.jp/#organization"
             },
@@ -80,9 +81,10 @@
       <a class="logo" href="../"><img src="../assets/muchimon-logo.png" alt="ムチモン" /></a>
       <nav>
         <a href="../">個人での利用はこちら</a>
-        <a href="#scene">導入シーン</a>
+        <a href="#scene">塾の課題</a>
         <a href="#flow">使い方</a>
-        <a href="#pilot">無料テスト導入</a>
+        <a href="#report">講師用レポート</a>
+        <a href="#pilot">試験導入</a>
         <a class="nav-cta" href="#juku-contact">資料請求</a>
       </nav>
     </header>
@@ -90,20 +92,16 @@
     <main id="top">
       <section class="juku-hero">
         <div class="juku-hero-copy">
-          <p class="kicker">宿題未提出・家庭学習の定着に悩む塾へ</p>
-          <p class="hero-brand">ムチモン<span>for 塾</span></p>
-          <h1><span class="phrase">宿題を「やらせる」から、</span><span class="phrase accent">自然と続く家庭学習へ。</span></h1>
-          <p class="lead">ムチモンは、AIキャラクターが宿題の解説・類似問題・声かけを行い、塾の外でも生徒の学習習慣づくりを支援する、塾向け学習習慣化アプリです。</p>
+          <p class="kicker">小学4〜6年生 × 個別指導塾・自立学習型塾</p>
+          <p class="hero-brand">ムチモン<span>AI学習伴走サービス</span></p>
+          <h1><span class="phrase">宿題を出したのに、</span><span class="phrase accent">やってこない。</span></h1>
+          <p class="hero-subtitle"><span class="phrase">会話で家庭学習への取り組みを促し、</span><span class="phrase">レポートで次の声かけにつなぐ。</span></p>
+          <p class="lead">家庭で学習を行わない生徒に、AIキャラクターが宿題への取り組みを促します。講師には、授業外の生徒を理解する手がかりを。ムチモンが、家庭と教室のあいだをつなぎます。</p>
           <div class="actions">
-            <a class="primary business-cta" href="#juku-contact">まずは一部生徒で無料テスト導入</a>
+            <a class="primary business-cta" href="#juku-contact">一部生徒での試験導入を相談する</a>
             <a class="secondary juku-link" href="#juku-contact">資料請求</a>
           </div>
-          <p class="hero-note">個人塾・中小規模塾向け ／ 無料テスト導入受付中</p>
-          <div class="juku-proof">
-            <div><strong>宿題未提出</strong><span>家庭での取り組みを後押し</span></div>
-            <div><strong>家庭学習</strong><span>自然と続く習慣づくり</span></div>
-            <div><strong>個別フォロー</strong><span>塾の外のつまずきを支援</span></div>
-          </div>
+          <p class="hero-note">個人塾・中小規模塾向け ／ 試験導入のご相談受付中</p>
         </div>
         <div class="juku-hero-visual">
           <div class="ipad-frame">
@@ -111,59 +109,39 @@
             <div class="ipad-screen"><img src="../assets/muchimon-motivation.png" alt="ムチモンの学習習慣化画面" /></div>
           </div>
           <img class="juku-mascot" src="../assets/muchimon-character.png" alt="ムチモン" />
-          <div class="bubble"><span>塾の授業と、次の授業のあいだに。</span><strong>家庭学習にも、頼れる伴走者を。</strong></div>
+          <div class="bubble"><span>いつもの教材と、一緒に。</span><strong>授業のない日の家庭学習も支えます。</strong></div>
         </div>
       </section>
 
       <section class="juku-strip">
-        <p>授業中の指導だけでは管理しきれない「家で宿題をやる」を、AIキャラクターとの対話で支えます。</p>
-        <a href="#juku-contact">無料テスト導入を相談する</a>
+        <p>新しい教材ではなく、塾の伴走力を拡張するサービス。</p>
+        <a href="#juku-contact">試験導入を相談する</a>
       </section>
 
       <section class="section juku-section" id="scene">
         <div class="heading">
-          <p class="kicker">塾長・教室長のみなさまへ</p>
-          <h2><span class="phrase">授業は見られる。</span><span class="phrase">でも、家での宿題までは。</span></h2>
+          <p class="kicker">こんな課題はありませんか？</p>
+          <h2><span class="phrase">宿題を出しても、</span><span class="phrase">家庭で学習を行わない。</span></h2>
+          <p>宿題を出したのに、やってこない。家庭で学習を行わず、次の授業を迎えてしまう。ムチモンは、そんな生徒への働きかけと、講師による授業外のフォローを支えます。</p>
         </div>
         <div class="scenario-grid">
           <article>
-            <span>Scene 01</span>
-            <h3>宿題未提出が続き、授業効果が出にくい</h3>
-            <p>塾では授業中の指導はできても、家庭で宿題をやるかどうかまでは管理しきれません。</p>
-            <ul>
-              <li>宿題を撮影するだけで家庭学習を開始</li>
-              <li>ムチモンが声かけし、学習の入口を下げる</li>
-              <li>解説と類似問題で宿題後の理解を支える</li>
-            </ul>
+            <span>01</span><h3>宿題を出したのに、やってこない</h3><p>「あとでやる」と言ったまま、家庭で学習を行わず、次の授業を迎えてしまう。</p>
           </article>
           <article>
-            <span>Scene 02</span>
-            <h3>家庭での声かけが保護者の負担になっている</h3>
-            <p>宿題未提出が続くと、保護者が塾の効果を感じにくくなり、満足度にも影響します。</p>
-            <ul>
-              <li>生徒の意志や保護者の声かけだけに頼らない</li>
-              <li>AIキャラクターが学習への心理的ハードルを下げる</li>
-              <li>家庭学習の継続で保護者満足度を高める</li>
-            </ul>
+            <span>02</span><h3>宿題をやらなかった理由が分からない</h3><p>取り組みや会話の様子が見えず、次の支援につなげにくい。</p>
           </article>
           <article>
-            <span>Scene 03</span>
-            <h3>講師の個別フォローだけでは対応しきれない</h3>
-            <p>家庭学習が定着しない生徒には、授業外でも一人で進められる仕組みが必要です。</p>
-            <ul>
-              <li>宿題の解説・類似問題・声かけを塾外で補完</li>
-              <li>塾の個別フォローを家庭学習側から支える</li>
-              <li>継続率・退塾防止への貢献を目指す</li>
-            </ul>
+            <span>03</span><h3>生徒ごとの声かけを考える時間がない</h3><p>授業準備や指導で忙しく、授業外のフォローまで手が回らない。</p>
           </article>
+          <article><span>04</span><h3>家庭学習の管理を保護者に任せきり</h3><p>毎日の「勉強しなさい」が、家庭の負担になっている。</p></article>
         </div>
       </section>
 
       <section class="section juku-value">
         <div class="heading">
-          <p class="kicker">Value</p>
-          <h2><span class="phrase">家での「わからない」に、</span><span class="phrase">ムチモンが寄り添う。</span></h2>
-          <p>ムチモンは、生徒の意志や保護者の声かけだけに頼らず、AIキャラクターとの対話や学習サポートによって、家庭学習が自然と続く仕組みをつくります。</p>
+          <p class="kicker">生徒と講師、両方の伴走者に</p>
+          <h2><span class="phrase">家庭での取り組みを、</span><span class="phrase">教室での声かけへ。</span></h2>
         </div>
         <div class="value-layout">
           <div class="ipad-frame">
@@ -171,48 +149,65 @@
             <div class="ipad-screen"><img src="../assets/muchimon-next.png" alt="ムチモンが類題を出す画面" loading="lazy" /></div>
           </div>
           <div class="value-list">
-            <article><strong>01</strong><h3>家庭学習の習慣化</h3><p>AIキャラクターの声かけで、宿題に取り組む心理的ハードルを下げます。</p></article>
-            <article><strong>02</strong><h3>宿題未提出の改善</h3><p>問題を撮影するだけで、解説と類似問題につなげ、家庭での学習を止めにくくします。</p></article>
-            <article><strong>03</strong><h3>塾でのフォローにつなげる</h3><p>学習ログを手がかりに、授業外での取り組みを把握。生徒への声かけや個別フォローを補います。</p></article>
+            <article><strong>生徒には</strong><h3>宿題への取り組みと、家庭学習の継続を。</h3><p>キャラクターとの会話で宿題への取り組みを促し、解説・類似問題で学習をサポート。家庭で学習を行う習慣づくりを支えます。</p></article>
+            <article><strong>講師には</strong><h3>生徒を理解し、声をかける手がかりを。</h3><p>学習の記録と会話の様子をレポートに。授業外の生徒の姿を知り、一人ひとりに合ったフォローにつなげます。</p></article>
           </div>
         </div>
       </section>
 
       <section class="section juku-flow" id="flow">
         <div class="heading">
-          <p class="kicker">How it works</p>
-          <h2><span class="phrase">宿題を撮ることから始まる、</span><span class="phrase">5つの学習サポート。</span></h2>
+          <p class="kicker">家庭と教室をつなぐ、5つのステップ</p>
+          <h2><span class="phrase">会話から始まる。</span><span class="phrase">次の学習につながる。</span></h2>
         </div>
         <div class="steps">
-          <article><span>01</span><h3>宿題を撮影</h3><p>家庭で手が止まった問題を、生徒がそのまま送ります。</p></article>
-          <article><span>02</span><h3>声かけ</h3><p>ムチモンが雑談やヒントで、学習の入口をやわらげます。</p></article>
-          <article><span>03</span><h3>解説</h3><p>考え方を分解し、生徒が一人でも理解しやすい形で支えます。</p></article>
-          <article><span>04</span><h3>類題</h3><p>似た問題に取り組み、理解の定着を確認します。</p></article>
-          <article><span>05</span><h3>学習ログ</h3><p>取り組みの記録を残し、塾の個別フォロー補完につなげます。</p></article>
+          <article><span>01</span><h3>キャラクターと会話</h3><p>気軽なおしゃべりを、アプリを開くきっかけに。</p></article>
+          <article><span>02</span><h3>宿題に取り組む</h3><p>いつもの宿題を撮影。解説や類似問題で家庭学習を支えます。</p></article>
+          <article><span>03</span><h3>学習・会話をレポート</h3><p>取り組んだ内容と会話の様子を、講師向けにまとめます。</p></article>
+          <article><span>04</span><h3>講師が個別に声かけ</h3><p>レポートと声かけ例を手がかりに、生徒をフォロー。</p></article>
+          <article><span>05</span><h3>次の家庭学習へ</h3><p>「見てもらえている」という実感を、次の取り組みへつなげます。</p></article>
         </div>
       </section>
 
-      <section class="section juku-report">
-        <div>
-          <p class="kicker">For Parents & Teachers</p>
-          <h2><span class="phrase">家でのがんばりを、</span><span class="phrase">次の授業の力に。</span></h2>
-          <p>家庭学習の定着は、授業で学んだことを積み重ねる土台です。ムチモンは、保護者の声かけ負担を軽減しながら、塾の授業効果と保護者満足度、継続率の向上への貢献を目指します。</p>
+      <section class="section classroom-report" id="report">
+        <div class="heading"><p class="kicker">講師専用の管理画面</p><h2><span class="phrase">記録を見るだけでなく、</span><span class="phrase">次の声かけが見えてくる。</span></h2><p>学習時間や教科だけでなく、会話の話題や利用状況も把握。週間サマリーと声かけ例が、生徒に寄り添うフォローを支えます。</p></div>
+        <div class="report-layout">
+          <figure class="teacher-preview">
+            <div class="ipad-frame"><div class="ipad-camera"></div><div class="teacher-screen">
+              <div class="report-top"><strong>学習レポート</strong><span>1週間</span></div>
+              <p class="report-period">1週間の学習のまとめ</p>
+              <div class="report-metrics"><div><small>学習時間</small><strong>日ごとの記録</strong></div><div><small>取り組む時間帯</small><strong>よく使う時間</strong></div><div><small>学習内容</small><strong>教科・単元</strong></div></div>
+              <div class="report-detail"><strong>取り組んだ教科・単元</strong><p>算数・数学 ／ 小数の計算</p></div>
+              <div class="report-detail conversation"><strong>会話の話題・利用状況</strong><p>勉強の合間のおしゃべりも、理解の手がかりに。</p></div>
+              <div class="report-hint"><strong>今週の声かけ例</strong><p>「小数の計算に取り組んだんだね。どんなところが難しかった？」</p></div>
+            </div></div>
+            <figcaption>レポートの表示例です。管理画面は塾講師専用です。</figcaption>
+          </figure>
+          <ol class="report-points">
+            <li><span>01</span><div><h3>学習時間・時間帯</h3><p>いつ、どのくらい取り組んでいるか。</p></div></li>
+            <li><span>02</span><div><h3>教科・単元・回数</h3><p>家庭での学習内容を把握。</p></div></li>
+            <li><span>03</span><div><h3>会話の話題・利用状況</h3><p>学習記録だけでは見えない生徒の様子も。</p></div></li>
+            <li><span>04</span><div><h3>学習・会話の週間サマリー</h3><p>一週間の様子をまとめて確認。</p></div></li>
+            <li><span>05</span><div><h3>生徒に合わせた今週の声かけ例</h3><p>次の授業で、何を話すかのヒントに。</p></div></li>
+          </ol>
         </div>
-        <div class="phone-preview"><img src="../assets/parent-report-preview.png" alt="保護者向け学習ログのプレビュー" loading="lazy" /></div>
       </section>
 
-      <section class="section juku-fit">
-        <div class="heading">
-          <p class="kicker">Recommended</p>
-          <h2><span class="phrase">こんな課題から、</span><span class="phrase">一緒に取り組みませんか。</span></h2>
-        </div>
-        <div class="fit-list">
-          <div>宿題未提出が続く生徒への対応に悩んでいる</div>
-          <div>家庭学習が定着していない生徒が多い</div>
-          <div>生徒の学習意欲の低さに課題を感じている</div>
-          <div>講師の個別フォローだけでは対応しきれない</div>
-          <div>保護者に塾の効果を感じてもらいにくい</div>
-          <div>中小規模塾として継続率・退塾防止に取り組みたい</div>
+      <section class="section classroom-compare" id="difference">
+        <div class="heading"><p class="kicker">他サービスとの違い</p><h2><span class="phrase">いつもの教材に、</span><span class="phrase">「続ける伴走」をプラス。</span></h2><p>いつもの教材と併用しながら、宿題への取り組みと家庭学習の継続、講師によるフォローを支えます。</p></div>
+        <div class="comparison-grid">
+          <article><h3>一般的なAI教材</h3><p>問題を最適化</p><p>正誤・習熟度を把握</p></article>
+          <article><h3>学習管理ツール</h3><p>進捗を可視化</p><p>時間・進捗を把握</p></article>
+          <article class="muchimon-difference"><h3>ムチモン</h3><ul><li>宿題への取り組みと家庭学習の継続を支援</li><li>学習状況・会話・様子を把握</li><li>声かけ例まで提示</li></ul><strong class="compatible">既存教材と併用できます</strong></article>
+        </div><p class="comparison-note">サービスの役割を整理した比較です。各サービスの機能は提供元により異なります。</p>
+      </section>
+
+      <section class="section classroom-benefits">
+        <div class="heading"><p class="kicker">教室全体に生まれる価値</p><h2><span class="phrase">授業の外まで、</span><span class="phrase">伴走できる教室へ。</span></h2></div>
+        <div class="benefits-grid">
+          <article><span>塾・講師</span><h3>授業外の生徒も理解する</h3><p>家庭での取り組みを手がかりに、個別の声かけとフォローを。</p></article>
+          <article><span>生徒</span><h3>見てもらえる実感を、次の学習へ</h3><p>キャラクターと講師の伴走で、一人で抱え込まない家庭学習へ。</p></article>
+          <article><span>保護者</span><h3>「勉強しなさい」の負担を軽く</h3><p>保護者の声かけだけに頼らない、家庭学習の仕組みづくりを。</p></article>
         </div>
       </section>
 
@@ -220,8 +215,9 @@
         <div class="line-card juku-pilot-card">
           <div>
             <p class="kicker">Pilot Program</p>
-            <h2><span class="phrase">まずは一部生徒で</span><span class="phrase">無料テスト導入。</span></h2>
-            <p>宿題未提出や家庭学習の定着に課題を感じている生徒から、無料で小さくお試しいただけます。</p>
+            <h2><span class="phrase">まずは一部生徒で</span><span class="phrase">試験導入から。</span></h2>
+            <p>宿題を出してもやってこない、家庭で学習を行わない小学4〜6年生への対応に悩む塾へ。いつもの教材と併用しながら、生徒の取り組みと講師のフォローに合うかをお試しください。</p>
+            <p>価格・導入条件については、<a href="#juku-contact">お問い合わせください。</a></p>
           </div>
           <div class="line-steps">
             <div><span>1</span>申込・資料請求</div>
@@ -232,7 +228,7 @@
             <summary>
               <span>
                 <small>お問い合わせ</small>
-                <strong>まずは一部生徒で無料テスト導入</strong>
+                <strong>試験導入・価格のご相談／資料請求</strong>
               </span>
               <span class="toggle-icon" aria-hidden="true"></span>
             </summary>
@@ -241,14 +237,14 @@
               <input class="form-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_subject" value="【ムチモン塾向け】無料テスト導入・資料請求" />
+              <input type="hidden" name="_subject" value="【ムチモン塾向け】試験導入・価格のご相談／資料請求" />
               <input type="hidden" name="送信元ページ" value="muchimon.jp/juku" />
               <input type="hidden" name="登録種別" value="塾向け資料請求・ウェイティングリスト" />
-              <input type="hidden" name="お問い合わせ目的" value="無料テスト導入・資料請求" />
+              <input type="hidden" name="お問い合わせ目的" value="試験導入・価格のご相談／資料請求" />
 
               <div class="form-head">
-                <h3>無料テスト導入・資料請求</h3>
-                <p>対象生徒や導入イメージに合わせて、担当者よりメールでご案内します。</p>
+                <h3>試験導入・価格のご相談／資料請求</h3>
+                <p>価格・導入条件や資料について、担当者よりメールでご案内します。</p>
               </div>
 
               <fieldset class="form-section">
@@ -264,7 +260,7 @@
                     <input name="役職" type="text" autocomplete="organization-title" placeholder="例：塾長、教室長" required maxlength="100" />
                   </label>
                   <label><span class="label-row">メールアドレス <span class="required-badge">必須</span></span>
-                    <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" required maxlength="200" />
+                    <input name="email" type="email" autocomplete="email" placeholder="例：sample@example.com" pattern="[^\s@]+@[^\s@]+" title="@を含むメールアドレスを入力してください（例：sample@example.com）。" required maxlength="200" />
                   </label>
                 </div>
               </fieldset>
@@ -275,7 +271,7 @@
                   <legend>導入イメージ</legend>
                   <div class="form-grid">
                     <label>対象学年・人数
-                      <input name="対象学年・人数" type="text" placeholder="例：小4〜中2、30名ほど" maxlength="200" />
+                      <input name="対象学年・人数" type="text" placeholder="例：小4〜小6、10名ほど" maxlength="200" />
                     </label>
                     <label>希望時期
                       <select name="希望時期">
@@ -289,7 +285,7 @@
                   </div>
                   <div class="checkbox-group">
                     <p>気になっている課題</p>
-                    <label><input name="気になっている課題" type="checkbox" value="家庭学習が続かない" />家庭学習が続かない</label>
+                    <label><input name="気になっている課題" type="checkbox" value="宿題を出してもやってこない・家庭で学習を行わない" />宿題を出してもやってこない・家庭で学習を行わない</label>
                     <label><input name="気になっている課題" type="checkbox" value="保護者対応の負担が大きい" />保護者対応の負担が大きい</label>
                     <label><input name="気になっている課題" type="checkbox" value="講師ごとの指導差を補いたい" />講師ごとの指導差を補いたい</label>
                     <label><input name="気になっている課題" type="checkbox" value="勉強が苦手な生徒を支援したい" />勉強が苦手な生徒を支援したい</label>
@@ -299,7 +295,7 @@
                 <fieldset class="form-section">
                   <legend>相談内容</legend>
                   <label class="form-full">現在困っていること・相談内容
-                    <textarea name="message" placeholder="例：家庭学習が続かない生徒への無料テスト導入を相談したい" maxlength="5000"></textarea>
+                    <textarea name="message" placeholder="例：一部生徒での試験導入や価格について相談したい" maxlength="5000"></textarea>
                   </label>
                 </fieldset>
               </details>
@@ -310,8 +306,8 @@
               </label>
 
               <div class="form-actions">
-                <button class="primary business-cta" type="submit">無料テスト導入・資料請求する</button>
-                <small>入力いただいたメールアドレス宛に、無料テスト導入と資料のご案内をお送りします。</small>
+                <button class="primary business-cta" type="submit">相談・資料請求を送信する</button>
+                <small>入力いただいたメールアドレス宛に、試験導入・価格や資料のご案内をお送りします。</small>
               </div>
               <p class="form-status" aria-live="polite"></p>
             </form>
@@ -324,13 +320,14 @@
     <footer class="site-footer">
       <div class="footer-main">
         <a class="footer-logo" href="../"><img src="../assets/muchimon-logo.png" alt="ムチモン" /></a>
-        <p>ムチモン for 塾は、家庭学習の習慣化と塾でのフォローを支える塾向け学習習慣化アプリです。</p>
+        <p>ムチモンは、宿題への取り組みと家庭学習の継続を支え、レポートで講師の次の声かけにつなぐ、塾向けAI学習伴走サービスです。</p>
       </div>
       <div class="footer-links" aria-label="フッターナビゲーション">
         <a href="../">個人での利用はこちら</a>
-        <a href="#scene">導入シーン</a>
+        <a href="#scene">塾の課題</a>
         <a href="#flow">使い方</a>
-        <a href="#pilot">無料テスト導入</a>
+        <a href="#report">講師用レポート</a>
+        <a href="#pilot">試験導入</a>
         <a href="#juku-contact">法人利用のお問い合わせ</a>
         <a href="https://minakano.co.jp/" target="_blank" rel="noopener">運営会社</a>
       </div>
@@ -367,6 +364,9 @@
 
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
+          const emailInput = form.elements.namedItem("email");
+          emailInput.value = emailInput.value.trim();
+          if (!form.reportValidity()) return;
           const data = new FormData(form);
           const value = (key) => String(data.get(key) || "").trim();
           if (value("website")) return;
@@ -389,7 +389,7 @@
             if (!response.ok) throw new Error("submit failed");
 
             form.reset();
-            setStatus("success", "無料テスト導入・資料請求を受け付けました。入力いただいたメールアドレス宛にご案内をお送りします。");
+            setStatus("success", "ご相談・資料請求を受け付けました。入力いただいたメールアドレス宛にご案内をお送りします。");
           } catch {
             setStatus("error", "送信できませんでした。時間をおいて再度お試しください。");
           } finally {

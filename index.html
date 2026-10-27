@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ムチモン｜小中学生の学習伴走AI・算数学習サポート</title>
-    <meta name="description" content="ムチモンは、小中学生の家庭学習で手が止まった瞬間をAIキャラクターが支える学習伴走アプリです。小学生の算数から対応し、問題撮影、ヒント、解説、類題、学習ログまでつなげます。" />
+    <meta name="description" content="宿題をやらない、毎日「勉強しなさい」と言ってしまう。ムチモンはAIキャラクターとの会話で宿題への取り組みと家庭学習の継続を支える学習伴走サービスです。小学4〜6年生の算数から。塾での導入では、学習・会話のレポートを講師の声かけにつなげます。" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://muchimon.jp/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ムチモン" />
     <meta property="og:title" content="ムチモン｜小中学生の学習伴走AI・算数学習サポート" />
-    <meta property="og:description" content="小中学生の家庭学習で手が止まった瞬間を、AIキャラクターがヒント、解説、類題、学習ログまで伴走します。" />
+    <meta property="og:description" content="「宿題やった？」ばかりの毎日に、頼れる伴走者を。AIキャラクターが宿題への取り組みを促し、家庭学習の継続を支えます。" />
     <meta property="og:url" content="https://muchimon.jp/" />
     <meta property="og:image" content="https://muchimon.jp/assets/muchimon-hero.png" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ムチモン｜小中学生の学習伴走AI・算数学習サポート" />
-    <meta name="twitter:description" content="小中学生の家庭学習で手が止まった瞬間を、AIキャラクターがヒント、解説、類題、学習ログまで伴走します。" />
+    <meta name="twitter:description" content="「宿題やった？」ばかりの毎日に、頼れる伴走者を。AIキャラクターが宿題への取り組みを促し、家庭学習の継続を支えます。" />
     <meta name="twitter:image" content="https://muchimon.jp/assets/muchimon-hero.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./story-teaser.css?v=20260819-history1" />
     <link rel="stylesheet" href="./hero-mobile.css?v=20260821-hero1" />
     <link rel="stylesheet" href="./refinement.css?v=20260908" />
+    <link rel="stylesheet" href="./parents.css?v=20261027" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -60,7 +61,7 @@
             "applicationCategory": "EducationalApplication",
             "operatingSystem": "Web",
             "url": "https://muchimon.jp/",
-            "description": "小中学生の家庭学習で手が止まった瞬間をAIキャラクターが支える学習伴走アプリです。",
+            "description": "AIキャラクターとの会話で宿題への取り組みと家庭学習の継続を支える学習伴走サービスです。小学4〜6年生の算数から対応し、塾での導入では学習・会話のレポートを講師の声かけにつなげます。",
             "publisher": {
               "@id": "https://muchimon.jp/#organization"
             }
@@ -90,7 +91,15 @@
                 "name": "どの教科に対応していますか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "現在は小学生の算数に対応予定です。今後のアップデートで算数以外にも順次対応します。"
+                  "text": "小学4〜6年生の算数から対応予定です。今後のアップデートで対応範囲を順次広げます。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "塾向けサービスと同じものですか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "はい。同じムチモンが子どもの家庭学習を支えます。塾で導入する場合は、講師専用の管理画面で学習・会話のレポートを確認し、個別の声かけに活用します。"
                 }
               }
             ]
@@ -105,6 +114,7 @@
       <nav>
         <a href="./history/">ムチモンについて</a>
         <a href="#flow">使い方</a>
+        <a href="#home-report">塾との連携</a>
         <a class="nav-juku" href="./juku/">塾向け導入はこちら</a>
         <a href="#faq">FAQ</a>
         <a class="nav-cta" href="https://lin.ee/755YFJo" target="_blank" rel="noopener" data-track="line-register">LINE友だち追加</a>
@@ -117,10 +127,10 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="kicker">小学生の家庭学習に、AIの伴走者を。</p>
+          <p class="kicker">小学4〜6年生の家庭学習に、AIの伴走者を。</p>
           <p class="hero-brand">ムチモン<span>学習伴走AI</span></p>
           <h1><span class="phrase">「勉強しなさい」が、</span><span class="phrase accent">少し減る毎日へ。</span></h1>
-          <p class="lead">「ここ教えて」に、すぐ応えられない日も。<br class="desktop-break" />ムチモンが声をかけ、ヒントや解説で、子どもの算数をとなりで支えます。</p>
+          <p class="lead">宿題をやらない。声をかけても「あとで」。<br class="desktop-break" />ムチモンが会話で取り組みを促し、解説や類似問題で、毎日の家庭学習を支えます。保護者だけで抱え込まない、学習習慣づくりへ。</p>
           <div class="actions">
             <a class="primary line-button" href="https://lin.ee/755YFJo" target="_blank" rel="noopener" data-track="line-register"><span class="line-icon">LINE</span><span><strong>LINEで友だち追加</strong><small>リリース通知を受け取る</small></span><span class="cta-arrow">→</span></a>
             <a class="secondary" href="#flow">使い方を見る</a>
@@ -133,9 +143,9 @@
           </div>
         </div>
         <div class="hero-visual">
-          <div class="ipad-frame hero-ipad"><div class="ipad-camera"></div><div class="ipad-screen"><img src="./assets/muchimon-upload.png" alt="ムチモンの学習画面" /></div></div>
+          <div class="ipad-frame hero-ipad"><div class="ipad-camera"></div><div class="ipad-screen"><img src="./assets/muchimon-motivation.png" alt="キャラクターと会話しながら学ぶムチモンの画面" /></div></div>
           <img class="mascot" src="./assets/muchimon-character.png" alt="ムチモン" />
-          <div class="bubble"><span>ひとりで悩む時間を、一緒に考える時間へ。</span><strong>「どこで迷った？」から、はじめよう。</strong></div>
+          <div class="bubble"><span>いつもの宿題に、頼れるともだちを。</span><strong>会話も、学習も。ムチモンと一緒に。</strong></div>
         </div>
       </section>
 
@@ -153,12 +163,12 @@
       <section class="section problems">
         <div>
           <p class="kicker">毎日の宿題、こんなことはありませんか？</p>
-          <h2><span class="phrase">教えたい気持ちはある。</span><span class="phrase">でも、余裕がない日もある。</span></h2>
+          <h2><span class="phrase">「宿題やった？」で、</span><span class="phrase">また言い合いに。</span></h2>
         </div>
         <div class="cards three">
-          <article><span>01</span><h3>毎日「勉強しなさい」と言ってしまう</h3><p>声をかけるほど、子どもの表情が重くなる。家庭学習の入口で親子の負担が増えてしまいます。</p></article>
-          <article><span>02</span><h3>「ここ教えて」にすぐ答えられない</h3><p>家事や仕事の途中で聞かれても、丁寧に説明する時間を取りにくい場面があります。</p></article>
-          <article><span>03</span><h3>解説を読んでも続かない</h3><p>答えを見るだけでは理解が定着しづらく、次の似た問題でまた止まってしまいます。</p></article>
+          <article><span>01</span><h3>宿題があるのに、家でやらない</h3><p>「あとでやる」と言うけれど、結局そのまま。毎日同じことを注意するのに疲れてしまう。</p></article>
+          <article><span>02</span><h3>教えようとすると、親子で言い合いに</h3><p>見てあげたい気持ちはあるのに、うまく伝わらない。家事や仕事で、ずっと隣にいるのも難しい。</p></article>
+          <article><span>03</span><h3>塾に通っていても、家で勉強しない</h3><p>宿題に取り組まない理由も、家での様子も、先生にどう伝えればよいか分からない。</p></article>
         </div>
       </section>
 
@@ -167,14 +177,14 @@
 
       <section class="section features">
         <div class="heading">
-          <p class="kicker">Why Muchimon</p>
-          <h2><span class="phrase">手が止まったら、</span><span class="phrase">ムチモンの出番。</span></h2>
-          <p>教材を全部置き換えるのではなく、毎日の宿題や問題演習で止まったところに寄り添います。</p>
+          <p class="kicker">保護者だけが、頑張らなくていいように</p>
+          <h2><span class="phrase">教える役を、ひと休み。</span><span class="phrase">見守る時間を、少しずつ。</span></h2>
+          <p>ムチモンは、いつもの宿題と一緒に使うAI学習伴走サービス。保護者の声かけだけに頼らず、子どもが家庭で学習を行う習慣づくりを支えます。</p>
         </div>
         <div class="cards three">
-          <article><h3>「勉強しなさい」をやわらげる</h3><p>毎日の声かけを、キャラクターとの会話に置き換えます。親子の空気を穏やかに保ちやすい設計です。</p></article>
-          <article><h3>「ここ教えて」にすぐ寄り添う</h3><p>保護者がすぐ手を離せないときも、ムチモンが問題の入口を一緒に探します。</p></article>
-          <article><h3>算数から始める伴走体験</h3><p>まずは小学生の算数に対応。今後のアップデートで対応範囲を順次広げます。</p></article>
+          <article><h3>会話で、宿題への取り組みを促す</h3><p>キャラクターとの気軽なおしゃべりから学習へ。注意されるだけでは取り組まない子どもにも、いつもと違う働きかけを。</p></article>
+          <article><h3>「ここ教えて」に、となりで寄り添う</h3><p>宿題を撮影すると、ヒントや解説で考え方をサポート。類似問題にも取り組み、保護者が付ききりになれない時間を支えます。</p></article>
+          <article><h3>家での様子を、塾のフォローへ</h3><p>塾で導入する場合は、学習・会話のレポートを講師が確認。家庭での取り組みを、次の授業での個別の声かけにつなげます。</p></article>
         </div>
       </section>
 
@@ -195,26 +205,48 @@
 
       <section class="section flow" id="flow">
         <div class="heading">
-          <p class="kicker">How it works</p>
-          <h2><span class="phrase">いつもの宿題から、</span><span class="phrase">「できた」までの5ステップ。</span></h2>
+          <p class="kicker">家庭と教室をつなぐ、5つのステップ</p>
+          <h2><span class="phrase">いつもの宿題を、</span><span class="phrase">次の「やってみよう」へ。</span></h2>
         </div>
         <div class="steps">
-          <article><span>01</span><h3>問題を撮影</h3><p>小学生の算数で手が止まった問題を、スマートフォンでそのまま送れます。</p></article>
-          <article><span>02</span><h3>ムチモンが声かけ</h3><p>いきなり答えではなく、「どこで迷った？」と小さなヒントから一緒に考えます。</p></article>
-          <article><span>03</span><h3>解説で理解</h3><p>考え方を分解しながら、子どもが自分の言葉で納得できるように支えます。</p></article>
-          <article><span>04</span><h3>類題で定着</h3><p>似た問題にも取り組み、「わかった」を「できた」につなげます。</p></article>
-          <article><span>05</span><h3>学習ログで見守る</h3><p>取り組みの記録を残し、保護者が褒めるきっかけにできます。</p></article>
+          <article><span>01</span><h3>ムチモンと会話</h3><p>気軽なおしゃべりで、勉強への心理的ハードルをやわらげます。</p></article>
+          <article><span>02</span><h3>宿題に取り組む</h3><p>いつもの宿題を撮影。ヒント・解説・類似問題で算数の学習を支えます。</p></article>
+          <article><span>03</span><h3>学習・会話を記録</h3><p>取り組んだ内容や、会話の様子をレポートにまとめます。</p></article>
+          <article><span>04</span><h3>先生の声かけへ</h3><p>導入塾の講師がレポートを確認。一人ひとりに合わせてフォローします。</p></article>
+          <article><span>05</span><h3>次の家庭学習へ</h3><p>「見てもらえている」という実感を、次の取り組みにつなげます。</p></article>
         </div>
+        <p class="parent-flow-note">講師によるレポートの確認・声かけは、ムチモンを導入している塾での利用を想定しています。</p>
       </section>
 
 
 
 
       <section class="demo">
-        <div><p class="kicker">App Experience</p><h2>問題を送ると、ムチモンが会話で入口をつくります。</h2><p>子どもがひとりで抱え込まないように、まずは「何がわからないか」を一緒に見つけます。保護者は学習ログを通じて、取り組みを見守れます。</p></div>
+        <div><p class="kicker">いつもの教材と、一緒に使えます</p><h2><span class="phrase">新しい教材を増やさず、</span><span class="phrase">今ある宿題を支える。</span></h2><p>宿題を撮影すると、ムチモンが会話やヒントで考え方に寄り添います。解説の後は類似問題へ。子どもが一人で悩み続けないよう、取り組みを支えます。</p></div>
         <div class="demo-visual"><div class="ipad-frame demo-ipad"><div class="ipad-camera"></div><div class="ipad-screen"><img src="./assets/muchimon-explain.png" alt="ムチモンが問題を一緒に確認する画面" /></div></div></div>
       </section>
 
+      <section class="section parent-report" id="home-report">
+        <div class="heading"><p class="kicker">塾でムチモンを使うと</p><h2><span class="phrase">家でのがんばりが、</span><span class="phrase">先生の声かけにつながる。</span></h2><p>「家で勉強しないんです」と相談するだけでなく、家庭での学習や会話の様子を、先生が知る手がかりに。レポートをもとに、授業外も含めたフォローを支えます。</p></div>
+        <div class="parent-report-layout">
+          <div class="parent-report-image"><div class="ipad-frame"><div class="ipad-camera"></div><div class="ipad-screen"><img src="./assets/muchimon-ui-study.png" alt="ムチモンと算数に取り組む学習画面" loading="lazy" /></div></div><p>子どもはムチモンと学習。記録は講師のフォローの手がかりに。</p></div>
+          <div class="parent-report-list">
+            <article><span>01</span><h3>いつ、何に取り組んだか</h3><p>学習時間・時間帯、教科・単元・回数から、家での取り組みを把握します。</p></article>
+            <article><span>02</span><h3>会話から見える、子どもの様子</h3><p>会話の話題や利用状況も週間サマリーに。勉強の記録だけでは見えない様子も伝えます。</p></article>
+            <article><span>03</span><h3>一人ひとりに合った声かけへ</h3><p>レポートと声かけ例を手がかりに、先生が子どもに寄り添うフォローにつなげます。</p></article>
+          </div>
+        </div>
+        <p class="parent-flow-note">管理画面は塾講師専用です。利用できる内容は、ご利用の塾での導入状況によります。</p>
+        <a class="trust-link" href="./juku/">塾向けの導入について見る</a>
+      </section>
+
+      <section class="section parent-benefits">
+        <div class="heading"><p class="kicker">目指すのは、親子で無理をしない家庭学習</p><h2><span class="phrase">注意する時間から、</span><span class="phrase">がんばりを認める時間へ。</span></h2></div>
+        <div class="parent-benefit-grid">
+          <article><span>子どもには</span><h3>一緒に取り組む、ともだちを。</h3><p>会話と学習サポートで、宿題への取り組みを後押し。家庭で学習を行う習慣づくりを支えます。</p></article>
+          <article><span>保護者には</span><h3>一人で抱え込まない、見守りを。</h3><p>毎日の注意や、付ききりで教える負担を軽くすることを目指します。塾での利用なら、先生のフォローにもつながります。</p></article>
+        </div>
+      </section>
 
 
 
@@ -249,7 +281,15 @@
 
       <section class="section faq" id="faq">
         <div class="heading"><p class="kicker">FAQ</p><h2>よくある質問</h2></div>
-        <div class="faq-list"><article><h3>正式リリース前でも登録できますか？</h3><p>はい。公式LINEに登録すると、リリース通知や使い方の案内を受け取れます。</p></article><article><h3>いつから使えますか？</h3><p>現在はサービスリリース前です。公式LINEに登録すると、公開日や使い方などリリースに関する案内を受け取れます。</p></article><article><h3>どの教科に対応していますか？</h3><p>現在は小学生の算数に対応予定です。今後のアップデートで算数以外にも順次対応します。</p></article><article><h3>問題画像や学習ログはどう扱われますか？</h3><p>問題画像、個人情報、学習ログは利用規約とプライバシーポリシーに従って扱います。未成年の利用は保護者確認を前提とします。</p></article></div>
+        <div class="faq-list">
+          <article><h3>正式リリース前でも登録できますか？</h3><p>はい。公式LINEに登録すると、リリース通知や使い方の案内を受け取れます。</p></article>
+          <article><h3>いつから使えますか？</h3><p>現在はサービスリリース前です。公式LINEに登録すると、公開日や使い方などリリースに関する案内を受け取れます。</p></article>
+          <article><h3>どの教科に対応していますか？</h3><p>小学4〜6年生の算数から対応予定です。今後のアップデートで対応範囲を順次広げます。</p></article>
+          <article><h3>塾向けサービスと同じものですか？</h3><p>はい。同じムチモンが子どもの家庭学習を支えます。塾で導入する場合は、講師専用の管理画面で学習・会話のレポートを確認し、個別の声かけに活用します。</p></article>
+          <article><h3>保護者がずっと隣で教える必要はありますか？</h3><p>ムチモンが会話・ヒント・解説・類似問題で学習を支えるため、付ききりで教える負担を軽くすることを目指しています。利用開始時の確認や、必要に応じた見守りは保護者の方にお願いします。</p></article>
+          <article><h3>新しい教材を用意する必要はありますか？</h3><p>いつもの宿題や教材と併用するサービスです。対応範囲の算数の問題を撮影して、学習に取り組めます。</p></article>
+          <article><h3>問題画像や学習ログはどう扱われますか？</h3><p>問題画像、個人情報、学習ログは利用規約とプライバシーポリシーに従って扱います。未成年の利用は保護者確認を前提とします。</p></article>
+        </div>
       </section>
 
 
@@ -264,10 +304,11 @@
     <footer class="site-footer">
       <div class="footer-main">
         <a class="footer-logo" href="#top"><img src="./assets/muchimon-logo.png" alt="ムチモン" /></a>
-        <p>ムチモンは、小学生の算数で手が止まった瞬間をキャラクターが支える学習伴走アプリです。</p>
+        <p>ムチモンは、AIキャラクターとの会話で宿題への取り組みと家庭学習の継続を支える学習伴走サービスです。家庭と教室をつなぎ、保護者だけで抱え込まない学習習慣づくりを目指します。</p>
       </div>
       <div class="footer-links" aria-label="フッターナビゲーション">
         <a href="#flow">使い方</a>
+        <a href="#home-report">塾との連携</a>
         <a href="./history/">ムチモンについて</a>
         <a href="./juku/">塾向け導入はこちら</a>
         <a href="#faq">FAQ</a>
