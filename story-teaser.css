@@ -19,6 +19,62 @@
   margin-top: 24px;
 }
 
+.story-store {
+  margin-top: 28px;
+  padding: 16px;
+  border: 1px solid #c4ded1;
+  border-radius: 8px;
+  background: #edf7f2;
+}
+
+.story-store h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.story-store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.story-store-item {
+  display: grid;
+  gap: 8px;
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+.story-store-preview {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 330 / 280;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.story-store-preview img {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  width: 200%;
+  max-width: none;
+  height: auto;
+}
+
+.story-store-preview--sticker img {
+  left: -100%;
+}
+
+.story-store-item .primary {
+  max-width: 100%;
+  text-align: center;
+}
+
 .story-teaser-image {
   overflow: hidden;
   border: 10px solid #875725;
